@@ -1,0 +1,10 @@
+# 当前机器已安装并验证的直接依赖，不是完整跨平台锁文件。
+jupyterlab==4.6.3
+numpy==2.5.3
+pandas==3.0.5
+matplotlib==3.11.1
+seaborn==0.13.2
+scikit-learn==1.9.1
+ipykernel==7.3.0
+nbclient==0.11.0
+nbformat==5.11.1

@@ -5,3 +5,8 @@
 __pycache__/
 *.py[cod]
 .DS_Store
+week1/outputs/
+.env
+.env.*
+!.env.example
+*.log
