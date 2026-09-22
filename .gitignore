@@ -1,12 +1,18 @@
 .venv/
+.venv-dl/
 .cache/
 .jupyter/
 .ipynb_checkpoints/
 __pycache__/
 *.py[cod]
 .DS_Store
-week1/outputs/
+course/bootcamp/week*/outputs/
 .env
 .env.*
 !.env.example
 *.log
+
+# Downloaded course originals, page snapshots and extracted bundles stay local.
+# Keep the library catalog, manifest and per-course indexes in Git.
+/library/*/*
+!/library/*/README.md

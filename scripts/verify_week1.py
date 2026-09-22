@@ -6,7 +6,8 @@ import nbformat
 from nbclient import NotebookClient
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "week1/outputs/verified"
+WEEK1 = ROOT / "course/bootcamp/week1"
+OUTPUT = WEEK1 / "outputs/verified"
 OUTPUT.mkdir(parents=True, exist_ok=True)
 for key, folder in {
     "MPLCONFIGDIR": ROOT / ".cache/matplotlib",
@@ -31,7 +32,7 @@ FILES = [
 
 failed = []
 for relative in FILES:
-    path = ROOT / "week1" / relative
+    path = WEEK1 / relative
     try:
         notebook = nbformat.read(path, as_version=4)
         nbformat.validate(notebook)

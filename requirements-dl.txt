@@ -1,0 +1,5 @@
+# Week 3 PyTorch walkthrough; install into .venv-dl, see docs/setup/DEEP_LEARNING.md.
+-r requirements.txt
+torch
+nbformat
+nbclient
