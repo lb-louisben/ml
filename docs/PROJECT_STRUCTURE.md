@@ -22,9 +22,11 @@
 
 从项目根目录启动 `.venv` 和 JupyterLab。Week 1 Notebook 会向上查找包含 `course/bootcamp/week1/data/` 的项目根目录，因此也能从各自日目录运行。输出位于该课程的 `outputs/`，由 Git 忽略。
 
-Week 2/3 的带练教程位于各周目录，材料解释和示例代码整合在 Notebook 中；Week 3 共用 `numpy_mlp.py`。演示产物和执行副本保存到各周 `outputs/`，自己的独立练习放在 `work/`。PyTorch 使用 `.venv-dl`，配置见 [深度学习环境](setup/DEEP_LEARNING.md)。
+Week 2/3 的带练教程位于各周目录，材料解释和示例代码整合在 Notebook 中；Week 3 共用 `numpy_mlp.py`。演示产物和执行副本保存到各周 `outputs/`，自己的独立练习放在 `work/`。PyTorch 使用 `.venv`，配置见 [深度学习环境](setup/DEEP_LEARNING.md)。
 
 `library/manifest.json` 记录原始 URL、来源页面、下载状态、大小、SHA256 和获取日期。ZIP 原件与已解压的 `unpacked/` 按课程保存；要修改作业时复制到 `work/`，依赖与额外数据按包内 README 准备。
+
+`library/nju-llm-2026/` 单独保存 NJU 2026 讲义和作业题面，整个课程目录纳入 Git 版本控制，来源清单保存在该目录内。同步命令与推送步骤见 [NJU 课程总入口](../library/nju-llm-2026/README.md)；项目首页顶部可直达唯一的 NJU 课程总入口。
 
 下载资料运行 `python3 scripts/download_courses.py`，随后运行 `python3 scripts/build_library_catalog.py` 重建索引。下载器会复用已有下载并重试失败项，不会安装或执行课程代码。
 

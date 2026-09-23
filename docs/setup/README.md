@@ -36,7 +36,7 @@ deactivate
 
 ```bash
 source .venv/bin/activate
-python -c "import numpy, pandas, matplotlib, seaborn, sklearn; print('环境正常')"
+python -c "import numpy, pandas, matplotlib, seaborn, sklearn, torch; print('环境正常')"
 ```
 
 ## 重新安装依赖
@@ -52,4 +52,6 @@ python3 -m venv .venv
 
 ## 进入神经网络教程
 
-分类和 NumPy 示例继续使用本页环境。PyTorch 对照与训练使用 [独立深度学习环境](DEEP_LEARNING.md)，按指南选择内核并运行示例。
+分类、NumPy 和 PyTorch 示例统一使用本页的 `.venv` 环境。`requirements.txt` 已包含 PyTorch 与 Notebook 验证依赖；运行方法见 [PyTorch 指南](DEEP_LEARNING.md)。
+
+NJU 2026 课程也使用同一个 `.venv`，已补充 Transformers、分词、模型加载、计算图和作业测试依赖。具体版本、检查命令和模型文件准备见 [NJU 环境说明](../../library/nju-llm-2026/README.md#环境与模型)。

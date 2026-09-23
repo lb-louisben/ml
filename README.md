@@ -2,6 +2,8 @@
 
 这个项目集中管理机器学习学习所需的 **课程、练习、原版资料和个人实验**。内容从 Python 与数据分析入门，延伸到经典机器学习、深度学习和 NLP / LLM；本页是整个项目的入口。
 
+**NJU 2026：** [课程总入口：讲义、作业、环境和操作说明](library/nju-llm-2026/README.md)
+
 [快速跳转](#quick-links) · [目录总览](#layout) · [如何使用](#usage) · [启动环境](#run)
 
 <a id="quick-links"></a>
@@ -18,6 +20,7 @@
 | 查中文讲义、术语或公式 | [讲义目录](course/materials/README.md) · [术语表](course/materials/GLOSSARY.md) · [公式卡](course/materials/REFERENCE_CARD.md) |
 | 找作业、测验或项目要求 | [作业](course/assignments/README.md) · [测验](course/tests/README.md) · [项目](course/projects/README.md) |
 | 找学校原版课件、题目与代码包 | [官方资料库](library/README.md) · [逐主题文件索引](course/READING_LIST.md) |
+| 直接跟随 NJU 2026 年大语言模型课程 | [2026 讲义、配套 Notebook 与作业入口](library/nju-llm-2026/README.md) |
 | 记录自己的进度与成果 | [进度表](course/TRACKER.md) · [个人实验目录](work/README.md) |
 | 配置环境或检查是否能运行 | [基础环境](docs/setup/README.md) · [环境测试](docs/setup/00_环境测试.ipynb) · [PyTorch 环境](docs/setup/DEEP_LEARNING.md) |
 | 保存学习记录、了解项目维护 | [Git 指南](docs/GIT_GUIDE.md) · [技术文档](docs/README.md) |
@@ -53,14 +56,13 @@ machine learning/
 │   ├── VALIDATION.md              ← 资料验证记录
 │   └── archive/                  ← 历史方案
 ├── scripts/                      ← 资料下载、索引生成、Notebook 验证
-├── requirements.txt              ← 核心依赖声明
-├── requirements-tested.txt       ← 核心环境已验证版本
-└── requirements-dl.txt           ← PyTorch 独立环境依赖
+├── requirements.txt              ← 全部课程依赖（含 PyTorch）
+└── requirements-tested.txt       ← 本机已验证版本
 ```
 
 `course/projects/` 保存项目要求，自己的实现放在 `work/`。`library/` 保存学校原件；要修改其中的作业代码时，先复制到 `work/`。
 
-`.venv/` 是基础 Python 环境，`.venv-dl/` 用于 PyTorch，`.cache/`、`.jupyter/` 是运行缓存和配置；它们不属于课程内容。
+`.venv/` 是全部课程共用的 Python 环境，包含 PyTorch，`.cache/`、`.jupyter/` 是运行缓存和配置；它们不属于课程内容。
 
 <a id="usage"></a>
 
@@ -96,6 +98,8 @@ python -m jupyter lab
 | 验证 Week 1 的 8 本教学 Notebook | `.venv/bin/python scripts/verify_week1.py` |
 | 验证 Week 2/3 的 3 本带练 Notebook | `.venv/bin/python scripts/verify_bootcamp.py` |
 | 下载或重试学校资料 | `python3 scripts/download_courses.py` |
+| 同步 NJU 2026 讲义 | `python3 scripts/sync_nju.py lectures` |
+| NJU 固定作业模板（已一次性归档） | [A0–A5 源码、题目与测试](library/nju-llm-2026/README.md#作业) |
 | 重建资料库目录与文件索引 | `python3 scripts/build_library_catalog.py` |
 
 Notebook 验证副本保存在各周的 `outputs/verified/`；示例导出的图表与模型也在各周 `outputs/`，不会覆盖源 Notebook。详细目录规则见 [项目结构说明](docs/PROJECT_STRUCTURE.md)。

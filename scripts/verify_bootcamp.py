@@ -21,7 +21,7 @@ LESSONS = {
         "course/bootcamp/week3/01_numpy_network_walkthrough.ipynb", ".venv/bin/python"
     ),
     "pytorch": (
-        "course/bootcamp/week3/02_pytorch_training_walkthrough.ipynb", ".venv-dl/bin/python"
+        "course/bootcamp/week3/02_pytorch_training_walkthrough.ipynb", ".venv/bin/python"
     ),
 }
 

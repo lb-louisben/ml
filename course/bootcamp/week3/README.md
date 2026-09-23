@@ -11,7 +11,7 @@
 | 单元 | 跟着实现 | 辅助材料 |
 |---|---|---|
 | W3-01～07 | [01 NumPy 网络：手算、前向、反传与梯度检查](01_numpy_network_walkthrough.ipynb) | [带注释的 NumPy 实现](numpy_mlp.py) |
-| W3-08～10 | [02 PyTorch：逐项对照、训练、保存与评价](02_pytorch_training_walkthrough.ipynb) | [独立环境配置](../../../docs/setup/DEEP_LEARNING.md) |
+| W3-08～10 | [02 PyTorch：逐项对照、训练、保存与评价](02_pytorch_training_walkthrough.ipynb) | [PyTorch 运行配置](../../../docs/setup/DEEP_LEARNING.md) |
 
 两份 Notebook 都能从新内核独立运行，不依赖上一本的执行状态。教材固定导入本目录的 `numpy_mlp.py`。自己的实现写在 `work/` 中；若复制参考 Notebook，先修改开头的导入路径和 `OUT`，并打印导入模块的 `__file__` 确认正在使用自己的代码。每节包含必要概念、注释示例、应观察的性质、练习与提示。演示运行成功和自己的练习完成分别记录。
 
@@ -99,7 +99,7 @@
 
 **材料：** 本地 [PyTorch 练习](../../../library/stanford-cs231n-2025/unpacked/47b3a1b8-assignment2/PyTorch.ipynb)，只读 Tensor、autograd、模型与训练循环部分。
 
-进入本单元前按 [PyTorch 环境指南](../../../docs/setup/DEEP_LEARNING.md) 准备 `.venv-dl` 并选好内核；配置时间单独记录。先确认 `import torch` 和一个最小 Tensor 梯度例子能运行。
+进入本单元前按 [PyTorch 环境指南](../../../docs/setup/DEEP_LEARNING.md) 准备 `.venv` 并选好内核；配置时间单独记录。先确认 `import torch` 和一个最小 Tensor 梯度例子能运行。
 
 **独立练习：** 用 `nn.Linear → ReLU → nn.Linear` 建等价网络，复制 NumPy 权重和 bias；注意 `nn.Linear.weight` 与前面 `X @ W` 的权重排列需要转置。用相同输入、float64、相同平均交叉熵，对照 logits、loss、每个参数梯度和一次 SGD 更新。
 

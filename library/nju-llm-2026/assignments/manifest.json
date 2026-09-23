@@ -1,0 +1,63 @@
+{
+  "retrieved_at": "2026-09-22T11:44:13.049245+00:00",
+  "source": "https://njudeepengine.github.io/LLM-Blog/",
+  "onboarding": "https://njudeepengine.github.io/LLM-Blog/2025/06/10/A0-onboarding/",
+  "resources": [
+    {
+      "file": "homepage.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/",
+      "bytes": 16406,
+      "sha256": "7088926beb19aeeaf86f75767ede3c1b0153b238087c36b75dbe86b25ed381e0",
+      "source_sha256": "748df518bbb9754a86dd96bbaac00db3c6cfded5b123c235a9448d505b684e46"
+    },
+    {
+      "file": "2025/06/10/A0-onboarding/index.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/2025/06/10/A0-onboarding/",
+      "bytes": 43801,
+      "sha256": "a8e7bba08eb58c673902bbf3d9be407e8db9972bb85525de2877422ac95d8367",
+      "source_sha256": "b62758f2b1bb83bb8d430db631c75942a3d9ffc169dc71c7a17a492ab86191b9"
+    },
+    {
+      "file": "2025/06/14/A1-matmul/index.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/2025/06/14/A1-matmul/",
+      "bytes": 23799,
+      "sha256": "4173527f70b56eb663ca278427cbd6a84552459fc4414a694d60564fac7f1042",
+      "source_sha256": "d3774d95b0cfbd24f35d96f1188d83e2f1c7557c79c2079c9174743b21201d54"
+    },
+    {
+      "file": "2025/06/17/A2-norm-emb/index.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/2025/06/17/A2-norm-emb/",
+      "bytes": 47840,
+      "sha256": "e4df98f4f2d531152af68cd2564ea12b3737703e607ca9ec2d60c73b8314d107",
+      "source_sha256": "8a04297f17289df4d33711753451f975b9513565cfadd73ad9178c58be58eb29"
+    },
+    {
+      "file": "2025/06/29/A3-modeling-mlp/index.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/2025/06/29/A3-modeling-mlp/",
+      "bytes": 38940,
+      "sha256": "8a6ab278638c6f4e7de14f65b73aa34d242963dd89c2aff7e19abf72fd554550",
+      "source_sha256": "949796b630bd330ca65b6ee592216f06db08499123a1e65a7d34795696f8fbee"
+    },
+    {
+      "file": "2025/07/13/A4-attention-module/index.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/2025/07/13/A4-attention-module/",
+      "bytes": 50868,
+      "sha256": "5dffe69f5f6fc23e5328a0a0c738792b3ff69e7b18354b0781239a07a09e38d5",
+      "source_sha256": "dd74fc682b799445b0b3b66e44fbd787d5e9bef53b9cacb65c17c36e8ba5dd84"
+    },
+    {
+      "file": "2025/08/26/A5-transformer-block/index.html",
+      "url": "https://njudeepengine.github.io/LLM-Blog/2025/08/26/A5-transformer-block/",
+      "bytes": 50273,
+      "sha256": "98120bd37db703b43bcf30482d354978d4c435f8daf5ff36ba3579a3fb5ff5de",
+      "source_sha256": "b10ae838fee2c1e6427cfe434a2c0be95defb7bab2fd70c8f67168e2f0e866de"
+    },
+    {
+      "file": "BLOG.md",
+      "sha256": "bb61016c32e2c09f1d2b7ff325ca63a6389423056fdfc4cf0d31fa2a58338278",
+      "bytes": 1384,
+      "generated": true
+    }
+  ],
+  "policy": "fixed historical blog snapshot"
+}

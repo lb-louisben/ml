@@ -9,6 +9,7 @@
 | 入门任务 | [27 次学习总览](bootcamp/README.md) | 按单元打开具体材料、练习和完成标准 |
 | 中文导读 | [主题目录](materials/README.md) · [公式卡](materials/REFERENCE_CARD.md) | 预习、查概念、复习 |
 | 学校原件 | [官方资料库](../library/README.md) · [文件索引](READING_LIST.md) | 指南指定主课后 |
+| NJU 2026 课程 | [讲义与作业入口](../library/nju-llm-2026/README.md) | 直接跟随 NJU 大语言模型课程时 |
 | 补充作业 | [A01～A08](assignments/README.md) | 补弱项或替换同主题学校练习 |
 | 项目要求 | [项目目录](projects/README.md) | 阶段项目开始时 |
 | 测试与评分 | [测试目录](tests/README.md) · [评分规则](ASSESSMENT.md) | 阶段验收时 |

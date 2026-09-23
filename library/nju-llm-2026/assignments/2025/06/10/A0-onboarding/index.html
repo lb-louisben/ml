@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><base href="https://njudeepengine.github.io/LLM-Blog/2025/06/10/A0-onboarding/">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/LLM-Blog/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/LLM-Blog/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/LLM-Blog/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/LLM-Blog/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/LLM-Blog/css/main.css">
+
+
+<link rel="stylesheet" href="/LLM-Blog/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"njudeepengine.github.io","root":"/LLM-Blog/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="本作业旨在帮助你熟悉编程环境、提交流程以及基本的 PyTorch 编程。通过完成它，你将确保开发环境配置正确，理解如何提交未来的作业，并加强 PyTorch 编程技能。注意，作业通过 github classroom 发布，创建仓库的链接会在群公告中发布，请注意选择自己的学号加入 classroom，否则会影响成绩统计，如果没有出现你的学号，请联系助教。 Environment SetupOpti">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A0 Onboarding">
+<meta property="og:url" content="https://njudeepengine.github.io/2025/06/10/A0-onboarding/index.html">
+<meta property="og:site_name" content="LLM-Assignment-Doc">
+<meta property="og:description" content="本作业旨在帮助你熟悉编程环境、提交流程以及基本的 PyTorch 编程。通过完成它，你将确保开发环境配置正确，理解如何提交未来的作业，并加强 PyTorch 编程技能。注意，作业通过 github classroom 发布，创建仓库的链接会在群公告中发布，请注意选择自己的学号加入 classroom，否则会影响成绩统计，如果没有出现你的学号，请联系助教。 Environment SetupOpti">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://github.com/user-attachments/assets/10b56a7c-0770-4cb8-95c2-8799966b8a08">
+<meta property="og:image" content="https://njudeepengine.github.io/2025/06/10/A0-onboarding/first.jpg">
+<meta property="og:image" content="https://github.com/user-attachments/assets/85a65574-b0c1-46df-9f57-d279a545f636">
+<meta property="og:image" content="https://njudeepengine.github.io/2025/06/10/A0-onboarding/second.jpg">
+<meta property="article:published_time" content="2025-06-10T08:54:20.000Z">
+<meta property="article:modified_time" content="2025-09-02T16:39:13.893Z">
+<meta property="article:author" content="DeepEngine">
+<meta property="article:tag" content="Environment">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/10b56a7c-0770-4cb8-95c2-8799966b8a08">
+
+<link rel="canonical" href="https://njudeepengine.github.io/2025/06/10/A0-onboarding/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>A0 Onboarding | LLM-Assignment-Doc</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/LLM-Blog/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">LLM-Assignment-Doc</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/LLM-Blog/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/LLM-Blog/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/LLM-Blog/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://njudeepengine.github.io/2025/06/10/A0-onboarding/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/LLM-Blog/images/avatar.gif">
+      <meta itemprop="name" content="DeepEngine">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LLM-Assignment-Doc">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          A0 Onboarding
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-06-10 16:54:20" itemprop="dateCreated datePublished" datetime="2025-06-10T16:54:20+08:00">2025-06-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2025-09-03 00:39:13" itemprop="dateModified" datetime="2025-09-03T00:39:13+08:00">2025-09-03</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/LLM-Blog/categories/Assignment/" itemprop="url" rel="index"><span itemprop="name">Assignment</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>本作业旨在帮助你熟悉编程环境、提交流程以及基本的 PyTorch 编程。通过完成它，你将确保开发环境配置正确，理解如何提交未来的作业，并加强 PyTorch 编程技能。注意，作业<strong>通过 github classroom 发布</strong>，创建仓库的链接会在群公告中发布，请注意选择自己的学号加入 classroom，否则会影响成绩统计，如果没有出现你的学号，请联系助教。</p>
+<h1 id="Environment-Setup"><a href="#Environment-Setup" class="headerlink" title="Environment Setup"></a>Environment Setup</h1><h2 id="Option-1-Local-Setup"><a href="#Option-1-Local-Setup" class="headerlink" title="Option 1: Local Setup"></a>Option 1: Local Setup</h2><ul>
+<li><strong>Python</strong>: 3.10 或更高版本  </li>
+<li><strong>Packages</strong>: 推荐通过以下命令安装所有必要的依赖项：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure></li>
+<li><strong>Optional</strong>: 建议使用 Nvidia GPU 并安装 CUDA 12.0 或更高版本 ，否则某些功能可能无法正常运行（我们会尽最大努力确保硬件差异不会影响你的评分）。</li>
+</ul>
+<div class="note info">
+            <p><strong>注意</strong>：不同作业的 requirements.txt 可能略有差异</p>
+          </div>
+<h2 id="Option-2-Docker-Setup"><a href="#Option-2-Docker-Setup" class="headerlink" title="Option 2: Docker Setup"></a>Option 2: Docker Setup</h2><p>强烈建议使用来自 <a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/index.html">Nvidia PyTorch Release</a> 的 Docker 镜像（例如 <a target="_blank" rel="noopener" href="https://docs.nvidia.com/deeplearning/frameworks/pytorch-release-notes/rel-23-10.html#rel-23-10">23.10</a> 或更新的版本）作为基础环境，以避免依赖冲突。</p>
+<h1 id="Code-and-Debug"><a href="#Code-and-Debug" class="headerlink" title="Code and Debug"></a>Code and Debug</h1><h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><p>所有完成 Tasks 所需的文件都位于 <code>src/</code> 目录下，该目录是<strong>唯一</strong>会被作为 Python 模块导入的目录。因此，你需要注意以下几点：</p>
+<ul>
+<li><code>__init__.py</code> 文件对于 Python 模块来说是必不可少的，我们已经在 <code>src/</code> 中为你初始化好了所有必要的 <code>__init__.py</code> 文件，因此如果你出于个人目的需要修改它们，请务必小心。</li>
+<li>如果你有其他需要在模块内部导入的文件（例如 <code>utils.py</code>），请确保它们也都放在 <code>src/</code> 目录下，并使用相对导入方式，例如：<code>from .utils import *，from .common.utils import ...</code> 等。</li>
+</ul>
+<h3 id="TODO-Task-A0"><a href="#TODO-Task-A0" class="headerlink" title="TODO: Task A0"></a>TODO: Task A0</h3><p>A0 的任务很简单，<strong>不需要你进行任何 coding</strong>，我们提供了一个 demo，用来帮助你测试本地环境、测试提交流程以及熟悉 PyTorch 编程。接下来，以 demo 为例，主要介绍：</p>
+<ul>
+<li>理解神经网络中反向传播（Backward）的基本原理。</li>
+<li>实现一个线性层 ManualLinear 并手动计算梯度。</li>
+<li>比较 PyTorch 自动求导机制与手动计算的一致性。</li>
+</ul>
+<p>我们模拟的是一个最基本的线性变换 $\mathbf{Y} = \mathbf{X} \times \mathbf{W}$，其中：</p>
+<ul>
+<li>$\mathbf{X} \in \mathbb{R}^{B \times H \times D}$：输入张量，可以理解为批次、序列、特征维度；</li>
+<li>$\mathbf{W} \in \mathbb{R}^{D \times E}$：权重矩阵；</li>
+<li>$\mathbf{Y} \in \mathbb{R}^{B \times H \times E}$：输出张量。</li>
+</ul>
+<p>我们进一步定义一个标量损失函数 <code>loss = (Y ** 2).sum()</code>，即：</p>
+<script type="math/tex; mode=display">
+\text{Loss} = \sum_{i,j,k} \mathbf{Y}_{ijk}^2</script><p>进一步，完整的 <code>forward</code> 过程即：</p>
+<script type="math/tex; mode=display">
+\mathbf{Y} = \mathbf{X} \times \mathbf{W}，\text{Loss} = \sum_{i,j,k} \mathbf{Y}_{ijk}^2</script><p>我们首先给出对应的 <code>backward</code> 的计算过程：</p>
+<script type="math/tex; mode=display">
+\mathbf{G} = \frac{\partial \text{Loss}}{\partial \mathbf{Y}} = 2\mathbf{Y} \in \mathbb{R}^{B \times H \times E}</script><script type="math/tex; mode=display">
+\frac{\partial \text{Loss}}{\partial \mathbf{X}} = \mathbf{G} \times \mathbf{W}^\top = 2\mathbf{Y} \times \mathbf{W}^\top \in \mathbb{R}^{B \times H \times D}</script><script type="math/tex; mode=display">
+\frac{\partial \text{Loss}}{\partial \mathbf{W}} = \sum_{i=1}^B \sum_{j=1}^H \mathbf{X}_{ij}^\top \mathbf{G}{ij} = \mathbf{X}_{flat}^\top \times \mathbf{G}_{flat} \in \mathbb{R}^{D \times E}， \mathbf{X}_{flat} \in \mathbb{R}^{(B \cdot H) \times D}，\mathbf{G}_{flat} \in \mathbb{R}^{(B \cdot H) \times E}</script><p>最终，demo 中模拟实现的 <code>ManualLinear</code> 如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">ManualLinear</span>:</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, in_dim, out_dim, device=<span class="literal">None</span>, dtype=torch.float32</span>):</span><br><span class="line">        <span class="variable language_">self</span>.W = torch.randn(in_dim, out_dim, device=device, dtype=dtype, requires_grad=<span class="literal">False</span>)</span><br><span class="line">        <span class="variable language_">self</span>.W_grad = torch.zeros_like(<span class="variable language_">self</span>.W)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">forward</span>(<span class="params">self, x</span>):</span><br><span class="line">        <span class="variable language_">self</span>.<span class="built_in">input</span> = x</span><br><span class="line">        <span class="comment"># [b,h,d] @ [d,e] -&gt; [b,h,e]</span></span><br><span class="line">        <span class="keyword">return</span> x @ <span class="variable language_">self</span>.W</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">backward</span>(<span class="params">self, grad_output</span>):</span><br><span class="line">        <span class="comment"># grad_output: [b, h, e]</span></span><br><span class="line">        <span class="comment"># dL/dW = X^T @ grad_output</span></span><br><span class="line">        b, h, d = <span class="variable language_">self</span>.<span class="built_in">input</span>.shape</span><br><span class="line">        <span class="comment"># [b,h,d] -&gt; [b*h, d]</span></span><br><span class="line">        x_flat = <span class="variable language_">self</span>.<span class="built_in">input</span>.reshape(-<span class="number">1</span>, d)</span><br><span class="line">        <span class="comment"># [b,h,e] -&gt; [b*h, e]</span></span><br><span class="line">        grad_out_flat = grad_output.reshape(-<span class="number">1</span>, <span class="variable language_">self</span>.W.shape[<span class="number">1</span>])</span><br><span class="line">        <span class="comment"># [d, b*h] @ [b*h, e] -&gt; [d, e]</span></span><br><span class="line">        <span class="variable language_">self</span>.W_grad = x_flat.T @ grad_out_flat</span><br><span class="line">        <span class="comment"># dL/dx = grad_output @ W^T</span></span><br><span class="line">        <span class="comment"># [b,h,e] @ [e,d] -&gt; [b,h,d]</span></span><br><span class="line">        grad_input = grad_output @ <span class="variable language_">self</span>.W.T</span><br><span class="line">        <span class="keyword">return</span> grad_input</span><br><span class="line"></span><br><span class="line"><span class="comment"># ========== Manual ==========</span></span><br><span class="line">manual_linear = ManualLinear(d, e, device=device, dtype=dtype)</span><br><span class="line">y_manual = manual_linear.forward(x)</span><br><span class="line">loss_manual = y_manual.<span class="built_in">pow</span>(<span class="number">2</span>).<span class="built_in">sum</span>()</span><br><span class="line">grad_output = <span class="number">2</span> * y_manual</span><br><span class="line">grad_input_manual = manual_linear.backward(grad_output)</span><br></pre></td></tr></table></figure></p>
+<p>接下来，我们简要解释 <code>ManualLinear</code> 中反向传播对于输入梯度和权重梯度的计算推导。对于矩阵求导，其本质仍然是实矩阵函数 $\mathbf{F}$ 中的每个 $f$ 分别对矩阵变元 $\mathbf{X}$ 中的每个变量 $x$ 逐个求偏导，只是需要组织成向量、矩阵的形式。假设 $\mathbf{F}$ 中有 $m$ 个 $f$，变元中有 $n$ 个元素，那么，每个 $f$ 对变元中的每个元素逐个求偏导后，一共会产生 $m \times n$ 个结果。不严谨地，从直观上看：</p>
+<ul>
+<li>如果分子是列向量形式，分母是行向量形式，矩阵求导的结果组织成<strong>分子布局</strong>：</li>
+</ul>
+<script type="math/tex; mode=display">
+\frac{\partial \mathbf{F}_{2 \times 1}(\mathbf{X})}{\partial \mathbf{X}_{3 \times 1}^\top} = 
+\begin{bmatrix}
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \frac{\partial f_1}{\partial x_3} \\
+\frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \frac{\partial f_2}{\partial x_3}
+\end{bmatrix}_{2 \times 3}</script><ul>
+<li>如果分子是行向量形式，分母是列向量形式，矩阵求导的结果组织成<strong>分母布局</strong>：</li>
+</ul>
+<script type="math/tex; mode=display">
+\frac{\partial \mathbf{F}_{2 \times 1}^\top (\mathbf{X})}{\partial \mathbf{X}_{3 \times 1}} = 
+\begin{bmatrix}
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_2}{\partial x_1} \\
+\frac{\partial f_1}{\partial x_2} & \frac{\partial f_2}{\partial x_2} \\
+\frac{\partial f_1}{\partial x_3} & \frac{\partial f_2}{\partial x_3}
+\end{bmatrix}_{3 \times 2}</script><p>从结果看，两种布局只相差一个转置操作。实际上，分子布局和分母布局只是讨论矩阵求导中约定俗成的概念，并没有教材进行严格定义，所以请大家自行查阅相关资料更进一步地理解。这里介绍矩阵求导的布局，主要原因是涉及到深度学习框架自动求导算法的实现，影响最终梯度张量的 <code>shape</code>。理论上对于自动求导算法，分子布局和分母布局都可以使用，只要计算图遵循统一的约定并在实现中自洽即可。但在实际的深度学习工程中，几乎所有主流框架（如 PyTorch、TensorFlow、JAX）都采用<strong>分母布局</strong>（梯度矩阵形式），即梯度张量的 shape 总是和变量（输入）保持一致，在工程上非常自然、直观。</p>
+<p>在约定好求导的布局后。我们就可以引入关于矩阵求导的数学推导。常见的矩阵求导方法主要包括：</p>
+<ul>
+<li>定义法：直接根据矩阵求导定义展开，将每个元素的导数显式列出。这种方法最为直观，但操作繁琐，通常只用于教学或验证小型表达式。</li>
+<li>微分法：利用微分符号 $dX, dY$ 建立关系，从中提取导数结构。</li>
+<li>迹技巧：通过将矩阵函数转化为 $\mathrm{tr}(A^\top B)$ 等形式，借助求导规则间接推导结果。</li>
+</ul>
+<p>关于矩阵求导的数学推导请大家自行查阅学习相关资料，我们在这里不进行详细展开。因为在工程中，我们往往<strong>不会显示构造一个矩阵对矩阵求导的完整梯度矩阵（或 Jacobian 矩阵）</strong>。一方面，我们只关心损失函数对参数矩阵的导数结果，并不需要中间层变量的完整梯度；另一方面，当考虑一个 $\mathbb{R}^{m \times n}$ 的矩阵对一个 $\mathbb{R}^{p \times q}$ 的矩阵求导的结果，实际会得到一个四阶张量 $(m,n,p,q)$，那如果继续对另外一个高阶张量求导，情况会更加复杂。实际工程中，我们很难去描述任意阶的张量矩阵，因此在实践中不会显式构造完整的梯度矩阵。</p>
+<p>对于 demo 中的例子，为了得到 $\frac{\partial \text{Loss}}{\partial \mathbf{X}}$ 和 $\frac{\partial \text{Loss}}{\partial \mathbf{W}}$，我们通常依赖<strong>结构化的链式法则</strong>，即在计算图中从后向前地传播梯度，计算图中的每个节点（算子）都实现了其对输入变量的局部导数，反向传播时，节点得到来自下一层的“上游梯度”（即 Loss 对其输出的梯度），并与自身的局部梯度进行链式组合（如矩阵乘），从而计算出 Loss 对其输入的梯度，并继续传播。例如：</p>
+<script type="math/tex; mode=display">
+\frac{\partial \text{Loss}}{\partial \mathbf{X}} = \frac{\partial \text{Loss}}{\partial \mathbf{Y}} \frac{\partial \mathbf{Y}}{\partial \mathbf{X}}, \quad
+\frac{\partial \text{Loss}}{\partial \mathbf{W}} = \frac{\partial \text{Loss}}{\partial \mathbf{Y}} \frac{\partial \mathbf{Y}}{\partial \mathbf{W}}</script><p>对于 <code>ManualLinear backward</code>，其上游梯度即 $\text{grad_output} = \frac{\partial \text{Loss}}{\partial \mathbf{Y}} = 2 \mathbf{Y}$，局部导数推导：</p>
+<ul>
+<li><p>对于 $\frac{\partial \mathbf{Y}}{\partial \mathbf{X}}$：</p>
+<p>对任意样本 $(i,j,:)$，有：</p>
+<script type="math/tex; mode=display">
+\mathbf{Y}_{ij:} = \mathbf{X}_{ij:} \times \mathbf{W} \Rightarrow \frac{\partial \mathbf{Y}_{ij:}}{\partial \mathbf{X}_{ij:}} = \mathbf{W}</script><script type="math/tex; mode=display">\frac{\partial \text{Loss}}{\partial \mathbf{X}_{ij:}} = \frac{\partial \text{Loss}}{\partial \mathbf{Y}_{ij:}} \frac{\partial \mathbf{Y}_{ij:}}{\partial \mathbf{X}_{ij:}} = \frac{\partial \text{Loss}}{\partial \mathbf{Y}_{ij:}} \times \mathbf{W}^\top</script><p>由此，我们得到局部导数形式：</p>
+<script type="math/tex; mode=display">
+\mathbf{Y} = \mathbf{X} \times \mathbf{W} \Rightarrow
+\frac{\partial \mathbf{Y}}{\partial \mathbf{X}} = \mathbf{W}^\top</script></li>
+<li><p>对于 $\frac{\partial \mathbf{Y}}{\partial \mathbf{W}}$：</p>
+<p>首先，考虑单个样本 $ \mathbf{X}_i $ 的 <code>forward</code> 计算，有：$\mathbf{y} = \mathbf{x} \times \mathbf{W}$，如果把 b 理解成 batch，那 $\mathbf{W}$ 对不同样本共享权重。同样：</p>
+<script type="math/tex; mode=display">\mathbf{y}_{j:}=\mathbf{x}_j \times \mathbf{W} \Rightarrow \frac{\partial \mathbf{y}_{jk}}{\partial \mathbf{W}_{:k}} = \mathbf{x}_j^\top</script><script type="math/tex; mode=display">\frac{\partial \text{Loss}^{(i)}}{\partial \mathbf{W}} = \frac{\partial \text{Loss}^{(i)}}{\partial \mathbf{Y}_i}\frac{\partial \mathbf{Y}_i}{\partial \mathbf{W}} = \mathbf{X}_i^\top \times \frac{\partial \text{Loss}^{(i)}}{\partial \mathbf{Y}_i}</script><p>其中，$\text{Loss}^{(i)}$ 可以理解为第 $i$ 个样本对于最终损失的贡献。最后，考虑 batch 个样本，根据链式法则组合，有：</p>
+<script type="math/tex; mode=display">\frac{\partial \text{Loss}}{\partial \mathbf{W}} = \sum_{i=1}^{b} \mathbf{X}_i^\top \times \frac{\partial \text{Loss}}{\partial \mathbf{Y}_i}</script><p>由此，我们得到局部导数形式：</p>
+<script type="math/tex; mode=display">
+\mathbf{Y} = \mathbf{X} \times \mathbf{W} \Rightarrow
+\frac{\partial \mathbf{Y}}{\partial \mathbf{W}} = \mathbf{X}^\top</script></li>
+</ul>
+<div class="note warning">
+            <p><strong>注意</strong>: 这里的推导并不符合数学上严谨推导，局部导数形式中的“=”并不严格等于，含义是该局部导数在结构上应该这样表示，并没有构造中间变量的完整梯度矩阵，主要用于帮助理解。</p>
+          </div>
+<p>至此，我们不严谨地解释了 <code>ManualLinear backward</code> 的计算过程，至于上游梯度和局部导数如何组合，完全是按照分母布局的形式，即梯度 <code>shape</code> 保持与变量（输入）一致。</p>
+<h2 id="Debugging"><a href="#Debugging" class="headerlink" title="Debugging"></a>Debugging</h2><p>以下内容用于帮助你调试和 debug：</p>
+<h3 id="Naive-Debug-Mode"><a href="#Naive-Debug-Mode" class="headerlink" title="Naive Debug Mode"></a>Naive Debug Mode</h3><ul>
+<li>我们会在 <code>test_toy.py</code> 中提供一些带有明确答案的测试用例，这对你是可见的。</li>
+<li>建议在提交前，先在自己的机器上确保代码正确运行，可以使用以下命令进行测试：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pytest test_toy.py</span><br></pre></td></tr></table></figure></li>
+<li>你可以根据自己的调试需求自由修改 <code>test_toy.py</code> 文件，我们不会使用它（以及下面提到的 <code>test_with_ref.py</code>）来为你的代码打分。</li>
+</ul>
+<h3 id="Deep-Debug-Mode"><a href="#Deep-Debug-Mode" class="headerlink" title="Deep Debug Mode"></a>Deep Debug Mode</h3><ul>
+<li>根据 <code>test_toy.py</code>，我们提供了另一个测试文件 <code>test_with_ref.py</code>，其中会导入一个闭源的参考包 ref（结构与 src 相同，例如 <code>from ref import ...</code>，<code>from ref.modeling import ...</code>）。因此，你可以在基础的 toy 测试之外，自行创建测试用例，并与参考实现进行比较。</li>
+<li>我们提供<code>a_env_light_v&#123;y&#125;.tar</code>（基于 Ubuntu）的 Docker 镜像 tar 文件，已传到到 NJU Box（链接会在群公告中展示），你可以下载到你的环境中使用。</li>
+<li>然后按照下面的示例命令一步一步操作：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># step0. assumming that the tar file &quot;a_env_light_v&#123;y&#125;.tar&quot; is already downloaded into your private repo</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># step1. run the given script to load the docker image (default the light one) and execute the container</span></span><br><span class="line">bash run_docker.sh <span class="comment"># or maybe you need run it with sudo</span></span><br><span class="line"><span class="comment">#this script assume that your machine has an avaliable nvidia gpu.If not,you should to change the option in it ,and change the fixed device in test_with_ref.py.</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># step2. get into the repo path mounted into the container</span></span><br><span class="line"><span class="built_in">cd</span> a&#123;x&#125;_repo</span><br><span class="line"></span><br><span class="line"><span class="comment"># step3. run the test_with_ref.py</span></span><br><span class="line">pytest test_with_ref.py</span><br></pre></td></tr></table></figure></li>
+<li>对于 Windows，如果你已经安装了 Docker，可以从 <code>run_docker.sh</code> 中提取核心的 Docker 命令并自行运行；或者你也可以使用一些技巧，比如 <a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/windows/wsl/about">WSL</a> 或 <a target="_blank" rel="noopener" href="https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/">DinD</a>，来模拟类 Unix 的环境。</li>
+</ul>
+<div class="note warning">
+            <p><strong>注意</strong>: <code>test_toy.py</code> 和 <code>test_with_ref.py</code> 中的测试<strong>仅用于调试目的</strong>，它们可能<strong>并不代表</strong>我们在评分时使用的 <code>test_score.py</code> 中的实际测试用例。因此，请特别注意处理不同情况，尤其是一些 <strong>edge cases</strong>。</p>
+          </div>
+<h1 id="Submission"><a href="#Submission" class="headerlink" title="Submission"></a>Submission</h1><ul>
+<li>你需要通过 <code>git commit</code> 和 <code>git push</code> 将作业提交到该私有仓库的 <strong><code>main</code> 分支</strong>，包含作业要求的指定源文件，并确保在 <strong>hard deadline</strong> 之前完成提交，否则 <strong>逾期作业将被自动拒收</strong>。</li>
+<li>尽量 <strong>不要推送不必要的文件</strong>，尤其是像图片这样的大文件到仓库中。</li>
+<li>如果你因为一些特殊问题错过了截止时间，请直接联系老师（见 <a href="#Contact">Contact</a>）。</li>
+</ul>
+<div class="note info">
+            <p>我们提供了自动测试服务，但需要你在自己的作业仓库中更改一些设置。</p><!-- 1.<img width="1614" height="755" alt="9c1f681e4a1cd64ebdddcffae0db7937" src="https://github.com/user-attachments/assets/10b56a7c-0770-4cb8-95c2-8799966b8a08" /> --><p>首先：</p><p><img src="first.jpg" style="width: 80%; height: auto;"></p><!-- 2.<img width="1024" height="940" alt="f89c15a89e690bf2dfd8f48aae3682ad" src="https://github.com/user-attachments/assets/85a65574-b0c1-46df-9f57-d279a545f636" /> --><p>然后：</p><p><img src="second.jpg" style="width: 80%; height: auto;"></p><p>按照上图操作，对应的 <strong>url 我们会在群公告中给出</strong>，注意查收。完成该操作后，当你进行 <code>git push</code> 时，我们的测试机器会自动完成测试，并创建 <code>score-feedback</code> 分支返回你的分数，这可能会消耗一定时间，随实验难度不确定，请耐心等待，如果出现问题，请寻求助教的帮助。</p><p>每次测试后，我们<strong>会提供 score feedback</strong>（见 <a href="#Feedback">Feedback</a> 部分），以便你在 <strong>ddl</strong> 之前改进代码，争取更高的分数。</p>
+          </div>
+<h1 id="Scoring"><a href="#Scoring" class="headerlink" title="Scoring"></a>Scoring</h1><p>每个作业将根据评分范围 0~100 分进行评定。我们会下载你的代码，并通过运行 <code>test_script.sh</code> 脚本来执行 <code>test_score.py</code> 文件（该文件对你来说是不可见的空文件），在我们的本地机器上导入 Tasks 中指定的文件并运行一些测试用例。</p>
+<ul>
+<li>如果你在可选时间限制（optional time limit）内通过了所有测试，你将获得最高分 100 分。</li>
+<li>如果你在可选时间限制内未通过任何测试，或者程序运行出现异常，你将获得最低分 0 分。</li>
+<li>如果你在可选时间限制内只通过了部分测试，则你将获得介于 0~100 分 之间的分数，该分数是你通过的所有测试用例所对应分值的总和，具体得分标准见下表。</li>
+</ul>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Test Case</th>
+<th>Score</th>
+<th>Other Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task0 - Case1</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case2</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case3</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case4</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case5</td>
+<td>20</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="Feedback"><a href="#Feedback" class="headerlink" title="Feedback"></a>Feedback</h1><p>在评分完成后，我们会将你的得分情况以一个表格的形式写入一个新文件 <code>score.md</code> 中，并通过一个新的 commit 推送到你的仓库中，分支名为 <code>score-feedback</code>（这是一个临时分支，仅用于让你查看每次评分后各个测试用例的得分情况，<strong>请不要将其用于其他目的</strong>）。</p>
+<p><code>score.md</code> 文件内容示例：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>Test Case</th>
+<th>Score</th>
+<th>Status</th>
+<th>Error Message</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Task0 - Case1</td>
+<td>20</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case2</td>
+<td>20</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case3</td>
+<td>20</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case4</td>
+<td>20</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>Task0 - Case5</td>
+<td>20</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td>Total</td>
+<td>100</td>
+<td>😊</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>status icons 的含义如下:</p>
+<ul>
+<li>✅: passed the case</li>
+<li>❌: failed the case due to wrong answers</li>
+<li>🕛: failed the case due to timeout if the time limit is set</li>
+<li>❓: failed the case due to some exceptions (the error message will be shown at the corresponding <code>Error Message</code> cell)</li>
+<li>😊: all passed</li>
+<li>🥺: failed at least one case</li>
+</ul>
+<h1 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h1><p>记得关注老师的 Bilibili 账号，UID 为 390606417，观看<a target="_blank" rel="noopener" href="https://space.bilibili.com/390606417/lists?sid=3771310">线上课程</a>。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/LLM-Blog/tags/Environment/" rel="tag"># Environment</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/LLM-Blog/2025/06/03/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/LLM-Blog/2025/06/14/A1-matmul/" rel="next" title="A1 Matmul">
+      A1 Matmul <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Environment-Setup"><span class="nav-number">1.</span> <span class="nav-text">Environment Setup</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Option-1-Local-Setup"><span class="nav-number">1.1.</span> <span class="nav-text">Option 1: Local Setup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Option-2-Docker-Setup"><span class="nav-number">1.2.</span> <span class="nav-text">Option 2: Docker Setup</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Code-and-Debug"><span class="nav-number">2.</span> <span class="nav-text">Code and Debug</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Coding"><span class="nav-number">2.1.</span> <span class="nav-text">Coding</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TODO-Task-A0"><span class="nav-number">2.1.1.</span> <span class="nav-text">TODO: Task A0</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Debugging"><span class="nav-number">2.2.</span> <span class="nav-text">Debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Naive-Debug-Mode"><span class="nav-number">2.2.1.</span> <span class="nav-text">Naive Debug Mode</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deep-Debug-Mode"><span class="nav-number">2.2.2.</span> <span class="nav-text">Deep Debug Mode</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Submission"><span class="nav-number">3.</span> <span class="nav-text">Submission</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Scoring"><span class="nav-number">4.</span> <span class="nav-text">Scoring</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Feedback"><span class="nav-number">5.</span> <span class="nav-text">Feedback</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Contact"><span class="nav-number">6.</span> <span class="nav-text">Contact</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DeepEngine</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/LLM-Blog/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/LLM-Blog/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2025</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DeepEngine</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div> -->
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/LLM-Blog/lib/anime.min.js"></script>
+  <script src="/LLM-Blog/lib/velocity/velocity.min.js"></script>
+  <script src="/LLM-Blog/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/LLM-Blog/js/utils.js"></script>
+
+<script src="/LLM-Blog/js/motion.js"></script>
+
+
+<script src="/LLM-Blog/js/schemes/pisces.js"></script>
+
+
+<script src="/LLM-Blog/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>

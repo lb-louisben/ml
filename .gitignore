@@ -1,3 +1,8 @@
+# Other downloaded courses stay local; NJU course materials are versioned.
+/library/*/*
+!/library/*/README.md
+!/library/nju-llm-2026/**
+
 .venv/
 .venv-dl/
 .cache/
@@ -11,8 +16,3 @@ course/bootcamp/week*/outputs/
 .env.*
 !.env.example
 *.log
-
-# Downloaded course originals, page snapshots and extracted bundles stay local.
-# Keep the library catalog, manifest and per-course indexes in Git.
-/library/*/*
-!/library/*/README.md

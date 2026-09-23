@@ -1,4 +1,4 @@
-# 当前机器已安装并验证的直接依赖，不是完整跨平台锁文件。
+# 本机统一 .venv 环境的直接依赖版本；不是完整跨平台锁文件。
 jupyterlab==4.6.3
 numpy==2.5.3
 pandas==3.0.5
@@ -6,5 +6,14 @@ matplotlib==3.11.1
 seaborn==0.13.2
 scikit-learn==1.9.1
 ipykernel==7.3.0
-nbclient==0.11.0
+torch==2.14.0
 nbformat==5.11.1
+nbclient==0.11.0
+transformers==4.57.6
+huggingface-hub==0.36.2
+tokenizers==0.22.2
+accelerate==1.15.0
+safetensors==0.8.0
+torchviz==0.0.3
+graphviz==0.21
+pytest==9.1.1
