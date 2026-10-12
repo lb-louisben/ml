@@ -21,6 +21,8 @@
 
 需要保存为成果的图表、指标和报告放在个人任务的 `reports/`、`figures/` 等目录。`outputs/`、`checkpoints/`、`runs/`、`logs/` 是可重建运行产物，不直接提交。
 
+个人任务的 `data/`、`datasets/` 默认只提交 README，数据由原始作业 ZIP 或获取说明恢复；压缩包、视频、NetCDF、Pickle 和模型检查点也默认忽略。Bootcamp 的小型原始数据在 `assignments/` 中随练习保存，不受这条个人运行数据规则影响。
+
 NJU A0 原有实现已完整转存到 `work/nju-llm-2026/a0/`，`assignments/` 的 A0 保留原始 TODO 模板。现有 Bootcamp 学习记录仍随原 Notebook 保存。外课解压副本的 737 个文件已逐一与原 ZIP 比较，一致且无额外个人文件，因此保存 ZIP 即可还原。
 
 ## 为何把大资料放 Releases

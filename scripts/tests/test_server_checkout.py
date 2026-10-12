@@ -43,7 +43,8 @@ class FakeGit:
             output = self.status
         elif args == ["show", "HEAD:" + checkout.CONFIG_PATH]:
             output = json.dumps(CONFIG_DATA)
-        elif args[:2] not in (["sparse-checkout", "set"], ["config", "--replace-all"], ["config", "--add"]):
+        elif args[:2] not in (["sparse-checkout", "set"], ["read-tree", "-mu"],
+                             ["config", "--replace-all"], ["config", "--add"]):
             raise AssertionError("Unexpected Git command: {}".format(args))
         return subprocess.CompletedProcess(command, code, output, "fixture error" if code else "")
 
@@ -57,6 +58,7 @@ class FakeGit:
     def mutating_calls(self):
         return [call for call in self.calls
                 if call[0][3:5] in (["sparse-checkout", "set"],
+                                   ["read-tree", "-mu"],
                                    ["config", "--replace-all"], ["config", "--add"])]
 
 
@@ -168,8 +170,9 @@ class CheckoutTests(unittest.TestCase):
         self.assertIn("/.gitignore\n", stdin)
         self.assertNotIn("/library/", stdin)
         self.assertNotIn("/work/nju-llm-2026/\n", stdin)
-        self.assertEqual(writes[1][0][3:], ["config", "--replace-all", checkout.PROFILE_CONFIG_KEY, "week1"])
-        self.assertEqual(writes[2][0][3:], ["config", "--add", checkout.PROFILE_CONFIG_KEY, "nju-a0"])
+        self.assertEqual(writes[1][0][3:], ["read-tree", "-mu", "HEAD"])
+        self.assertEqual(writes[2][0][3:], ["config", "--replace-all", checkout.PROFILE_CONFIG_KEY, "week1"])
+        self.assertEqual(writes[3][0][3:], ["config", "--add", checkout.PROFILE_CONFIG_KEY, "nju-a0"])
 
     def test_existing_sparse_checkout_can_switch_profiles_and_default_is_all(self):
         (self.root / "README.md").write_text("sparse checkout")
@@ -178,6 +181,77 @@ class CheckoutTests(unittest.TestCase):
             self.assertEqual(checkout.main(["--repo-root", str(self.root), "set"]), 0)
         self.assertEqual(fake.mutating_calls()[1][0][-1], "all-exercises")
         self.assertNotIn("/library/", fake.mutating_calls()[0][1]["input"])
+        self.assertFalse(any(command[3] == "read-tree" for command, _ in fake.calls))
+
+    def test_retry_after_patterns_were_written_still_bootstraps_missing_index(self):
+        fake = FakeGit(self.root, sparse=True)
+        with patch.object(checkout.subprocess, "run", fake):
+            checkout.apply_profile(self.root, self.catalog, ["nju-a0"])
+        self.assertEqual(fake.mutating_calls()[1][0][3:], ["read-tree", "-mu", "HEAD"])
+
+    def test_real_no_checkout_clone_materializes_only_selected_files_and_stays_clean(self):
+        # All Git operations use temporary local repositories. No remote, main
+        # checkout, model downloads, or network connection is involved.
+        source = self.root / "source"
+        source.mkdir()
+
+        def run_git(repo, *arguments):
+            return subprocess.run(["git", "-C", str(repo), *arguments],
+                                  text=True, capture_output=True, check=True)
+
+        run_git(source, "init", "--quiet")
+        fixtures = {
+            "README.md": "fixture\n",
+            ".gitignore": "__pycache__/\n",
+            checkout.CONFIG_PATH: json.dumps(CONFIG_DATA),
+            "assignments/nju-llm-2026/a0/train.py": "print('exercise')\n",
+            "assignments/nju-llm-2026/SOURCES.json": "{}\n",
+            "work/nju-llm-2026/a0/personal.py": "print('personal')\n",
+            "work/nju-llm-2026/lecture1.md": "personal lecture notes\n",
+            "assignments/nju-llm-2026/a1/train.py": "other exercise\n",
+            "assignments/bootcamp/week1/train.py": "bootcamp exercise\n",
+            "work/bootcamp/week1/personal.py": "bootcamp implementation\n",
+            "library/nju-llm-2026/lecture.pdf": "lecture fixture\n",
+            "library/reference-book.pdf": "reference book fixture\n",
+        }
+        for name, content in fixtures.items():
+            path = source / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(content, encoding="utf-8")
+        run_git(source, "add", ".")
+        run_git(source, "-c", "user.name=Checkout fixture", "-c",
+                "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "Fixture")
+        clone = self.root / "clone"
+        run_git(self.root, "clone", "--quiet", "--no-checkout", str(source), str(clone))
+        self.assertFalse((clone / ".git/index").exists())
+        self.assertEqual({path.name for path in clone.iterdir()}, {".git"})
+
+        with redirect_stdout(io.StringIO()):
+            result = checkout.main(["--repo-root", str(clone), "set", "nju-a0"])
+        self.assertEqual(result, 0)
+        self.assertTrue((clone / "assignments/nju-llm-2026/a0/train.py").is_file())
+        self.assertTrue((clone / "work/nju-llm-2026/a0/personal.py").is_file())
+        self.assertTrue((clone / "assignments/nju-llm-2026/SOURCES.json").is_file())
+        self.assertTrue((clone / "README.md").is_file())
+        self.assertTrue((clone / ".gitignore").is_file())
+        self.assertFalse((clone / "library").exists())
+        self.assertFalse((clone / "work/nju-llm-2026/lecture1.md").exists())
+        self.assertFalse((clone / "assignments/nju-llm-2026/a1").exists())
+        self.assertEqual(run_git(clone, "status", "--porcelain=v1").stdout, "")
+        self.assertEqual(run_git(clone, "config", "--get-all", checkout.PROFILE_CONFIG_KEY).stdout,
+                         "nju-a0\n")
+
+        # Switching an initialized sparse checkout must retain local changes
+        # in an exercise that remains selected; read-tree would overwrite it.
+        personal = clone / "work/nju-llm-2026/a0/personal.py"
+        personal.write_text("my unfinished homework\n", encoding="utf-8")
+        with redirect_stdout(io.StringIO()):
+            self.assertEqual(checkout.main(["--repo-root", str(clone), "set", "nju-a0",
+                                           "--add", "week1"]), 0)
+        self.assertEqual(personal.read_text(encoding="utf-8"), "my unfinished homework\n")
+        self.assertTrue((clone / "assignments/bootcamp/week1/train.py").is_file())
+        self.assertTrue((clone / "work/bootcamp/week1/personal.py").is_file())
+        self.assertFalse((clone / "library").exists())
 
     def test_non_repository_is_refused_before_reading_config_or_writing(self):
         fake = FakeGit(self.root, inside=False)

@@ -77,7 +77,7 @@ Notebook 位于 `assignments/bootcamp/week1/`。Week 1 小数据已随所选练�
 服务器已检出归档清单与下载工具；先在清单中查找所需 ZIP 的 `library/` 相对路径，例如 CS224N A1：
 
 ```bash
-# 需要 gh CLI；公共资料可按其下载能力访问，私有仓库先 gh auth login
+# 需要 gh CLI，并先用 gh auth login 登录
 python3 scripts/library_archive.py fetch --file stanford-cs224n-w25/ff665a15-a1.zip
 mkdir -p work/cs224n/a1
 python3 -m zipfile -e library/stanford-cs224n-w25/ff665a15-a1.zip work/cs224n/a1

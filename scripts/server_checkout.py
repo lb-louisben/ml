@@ -152,10 +152,9 @@ def build_patterns(catalog: Catalog, names: Iterable[str]) -> List[str]:
     return list(dict.fromkeys(patterns))
 
 
-def ensure_safe_checkout(repo: Path) -> None:
+def ensure_safe_checkout(repo: Path) -> bool:
+    """Refuse a full checkout; return whether an empty index needs bootstrap."""
     sparse = git(repo, "config", "--bool", "core.sparseCheckout", check=False)
-    if sparse.returncode == 0 and sparse.stdout.strip() == "true":
-        return
     # A fresh clone --no-checkout contains only .git and has no Git index.
     # An emptied full checkout still has an index, and must remain protected.
     if not any(path.name != ".git" for path in repo.iterdir()):
@@ -163,7 +162,9 @@ def ensure_safe_checkout(repo: Path) -> None:
         if not index.is_absolute():
             index = repo / index
         if not index.exists():
-            return
+            return True
+    if sparse.returncode == 0 and sparse.stdout.strip() == "true":
+        return False
     status = git(repo, "status", "--porcelain=v1", "--untracked-files=all").stdout
     if status:
         raise CheckoutError(
@@ -182,9 +183,14 @@ def apply_profile(repo: Path, catalog: Catalog, names: Iterable[str],
     patterns = build_patterns(catalog, selected)
     if dry_run:
         return patterns
-    ensure_safe_checkout(repo)
+    fresh_no_checkout = ensure_safe_checkout(repo)
     git(repo, "sparse-checkout", "set", "--no-cone", "--stdin",
         input_text="\n".join(patterns) + "\n")
+    if fresh_no_checkout:
+        # sparse-checkout set writes the patterns, but an absent index has no
+        # HEAD entries to populate. Initialize it only after the patterns are
+        # in place, so lecture/reference blobs are never checked out first.
+        git(repo, "read-tree", "-mu", "HEAD")
     git(repo, "config", "--replace-all", PROFILE_CONFIG_KEY, selected[0])
     for name in selected[1:]:
         git(repo, "config", "--add", PROFILE_CONFIG_KEY, name)
