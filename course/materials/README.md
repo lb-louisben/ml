@@ -1,44 +1,24 @@
-# 中文预习与复习导读
+# 按需查概念
 
-这里的短章适合预习、查概念和复习。完整学习请结合 [课程学习指南](../STUDY_GUIDE.md) 中指定的 [本地官方讲义、slides 与作业](../../library/README.md)。短章不覆盖整学期的证明、例题与实现细节。所有中文章节是本项目编写的导读。
+[课程路线](../STUDY_GUIDE.md)
 
-## 按阶段查找
+这些中文短章只供查漏补缺，按当前问题打开；不构成第二条必读路线，也不替代代码实验。
 
-单元顺序与本科/研究生范围以 [三门课课程设计](../STUDY_GUIDE.md) 为准；下面按模型主题查阅，不形成第二条学习路线。
+| 用到哪里 | 短章 |
+|---|---|
+| 按需数学 | [线性代数](01_linear_algebra.md) |
+| 按需数学 | [概率与统计](02_probability_statistics.md) |
+| 按需数学 | [微积分与优化](03_calculus_optimization.md) |
+| M1/M11 | [数据与实验](04_data_and_experiment_design.md) |
+| M2–M3 | [线性模型](05_linear_models.md) |
+| M3–M4 | [分类与指标](06_classification_and_metrics.md) |
+| M5–M6 | [树与集成](07_trees_and_ensembles.md) |
+| M4/M7 | [概率模型与核](08_probabilistic_and_kernel_ml.md) |
+| M8–M10 | [无监督与泛化](09_unsupervised_and_generalization.md) |
+| D1–D2 | [神经网络与反传](10_neural_networks_and_backprop.md) |
+| D3/D12 | [训练诊断](11_deep_learning_patterns.md) |
+| D6–D8/L2–L4 | [Embedding 与 Transformer](12_embeddings_and_transformers.md) |
+| L5–L9 按方向 | [LLM 系统](13_llm_systems.md) |
+| 研究生选读 | [RL 与研究复现](14_rl_responsibility_and_research.md) |
 
-| 课程与主题 | 本地章节 | 可选配套练习与验收 |
-|---|---|---|
-| ML/DL 用到时补数学 · 矩阵与投影 | [01 线性代数](01_linear_algebra.md) | [A01](../../assignments/core/A01/A01_math_and_optimization.md) Part A |
-| ML/DL 用到时补数学 · 概率与统计 | [02 概率与统计](02_probability_statistics.md) | A01 Part B、[T0](../tests/T0_math_diagnostic.md) |
-| ML/DL 用到时补数学 · 梯度与优化 | [03 微积分与优化](03_calculus_optimization.md) | A01 Part C、T0 |
-| ML：M1/M11 · 数据与实验设计 | [04 数据与实验设计](04_data_and_experiment_design.md) | [A02](../../assignments/core/A02/A02_data_audit.md)、[P1](../projects/P1_tabular_benchmark.md) |
-| ML：M2–M3 · 线性模型 | [05 线性模型](05_linear_models.md) | [A03](../../assignments/core/A03/A03_regression_from_scratch.md) |
-| ML：M3–M4 · 分类与评价 | [06 分类与评价](06_classification_and_metrics.md) | [A04](../../assignments/core/A04/A04_classification_evaluation.md) |
-| ML：M5–M6 · 树与集成 | [07 树与集成](07_trees_and_ensembles.md) | A04、[T1](../tests/T1_undergraduate_midterm.md) |
-| ML：M4/M7 · 概率模型与核 | [08 概率模型与核](08_probabilistic_and_kernel_ml.md) | [A05](../../assignments/core/A05/A05_probabilistic_and_kernel_ml.md) |
-| ML：M8–M10 · 无监督与泛化 | [09 无监督与泛化](09_unsupervised_and_generalization.md) | [T2](../tests/T2_graduate_ml_final.md) |
-| DL：D1–D2 · 神经网络与反传 | [10 神经网络与反传](10_neural_networks_and_backprop.md) | [A06](../../assignments/core/A06/A06_backprop_and_training.md) |
-| DL：D3/D12 · 训练与复现 | [11 深度学习训练模式](11_deep_learning_patterns.md) | [P2](../projects/P2_deep_learning_reproduction.md) |
-| DL：D6–D8；LLM：L2–L4 · Embedding 与 Transformer | [12 Embedding 与 Transformer](12_embeddings_and_transformers.md) | [A07](../../assignments/core/A07/A07_transformer_from_scratch.md)、[T3](../tests/T3_dl_llm_oral.md) |
-| LLM：L5–L9 · 系统与评价 | [13 LLM、RAG 与 Agent](13_llm_systems.md) | 选做 [A08](../../assignments/core/A08/A08_rag_evaluation.md)、T3 |
-| 按项目需要选读：RL、责任型 ML 与研究复现 | [14 RL、责任型 ML 与复现](14_rl_responsibility_and_research.md) | P2 或 [Capstone](../projects/CAPSTONE.md) 的相关部分 |
-
-随时查：[公式与决策卡](REFERENCE_CARD.md) · [术语表](GLOSSARY.md) · [学习与复习方法](00_how_to_study.md)
-
-## 每章的完成标准
-
-以下用于当前选定的学习主题；仅预习或查阅时，不新增完整作业。
-
-1. 不看正文，用自己的话写出 5 句摘要。
-2. 手算章节里的 worked example。
-3. 完成“自测”，口头解释每个答案。
-4. 按学习指南选一套同主题练习；学校练习与 A 系列默认二选一，已有成果满足要求时补缺项即可。不能用“看懂了”替代实现。
-5. 在 [TRACKER](../TRACKER.md) 的简短复盘中记录成果链接、一个卡点和下一步。
-
-## 外部依赖程度
-
-- 核心概念预习：本目录。
-- 详细原版讲义、课件、作业与考试：[本地资料库](../../library/README.md)。
-- 视频与课程更新：按需要访问来源页面。
-
-返回：[完整路径](../README.md) · [根目录](../../README.md)
+随时查：[术语表](GLOSSARY.md) · [公式卡](REFERENCE_CARD.md) · [学习方法](00_how_to_study.md)。

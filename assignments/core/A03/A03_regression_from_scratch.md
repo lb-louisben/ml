@@ -1,6 +1,6 @@
 # A03：从零实现回归
 
-来源类型：本仓库自制；参考 ISLP 回归章节、MIT 18.06 最小二乘与 CS229 线性回归主题。预计 8～10 小时，100 分。
+来源类型：本仓库自制；参考 ISLP 回归章节、MIT 18.06 最小二乘与 CS229 线性回归主题。只选与当前单元有关的题，不要求整份完成。
 
 ## 任务
 
@@ -22,6 +22,6 @@
 
 至少写 5 个自动测试：维度、已知小例、奇异矩阵、梯度检查、与 sklearn 的容差比较。禁止调用 sklearn 的模型来实现“from scratch”部分。
 
-## 提交
+## 可保留的成果
 
 src/linear_models.py、tests/、a03.ipynb、report.md、requirements 或 environment 说明。

@@ -1,6 +1,6 @@
 # A07：从零实现 Self-Attention
 
-来源类型：本仓库自制；参考 Stanford CS224N 的 attention/Transformer 单元与 CS231n A3。预计 10～14 小时，100 分。
+来源类型：本仓库自制；参考 Stanford CS224N 的 attention/Transformer 单元与 CS231n A3。只选与当前单元有关的题，不要求整份完成。
 
 ## 任务
 

@@ -51,4 +51,4 @@ max_depth 从 2 增至 50：train error 通常单调下降；validation error �
 
 答案要点：bias 上升、variance 下降；平均弱相关误差；降低树间相关；小步长通常需更多轮；分裂依赖排序/阈值而非尺度；互相替代导致单个重要性低估。
 
-配套：[A04](../../assignments/core/A04/A04_classification_evaluation.md) · [P1](../projects/P1_tabular_benchmark.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

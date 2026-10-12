@@ -1,57 +1,53 @@
-# 环境配置与运行指南
+# 本机环境与日常使用
 
-[返回项目首页](../../README.md) · [环境测试 Notebook](00_环境测试.ipynb)
+[项目首页](../../README.md) · [课程路线](../../course/STUDY_GUIDE.md)
 
-## 启动 JupyterLab
+## 首次安装
 
-打开“终端”，依次运行：
-
-```bash
-cd "/Users/louis/Documents/workspace/School/cources/machine learning"
-source .venv/bin/activate
-python -m jupyter lab
-```
-
-浏览器会自动打开 JupyterLab。完成学习后，在终端按 `Control+C` 停止服务，再运行：
-
-```bash
-deactivate
-```
-
-## 在 VS Code 中使用
-
-1. 用 VS Code 打开本课程文件夹。
-2. 打开任意 `.ipynb` 文件。
-3. 点击右上角的“选择内核”或 `Select Kernel`。
-4. 选择当前项目的 `.venv/bin/python`。
-5. 点击代码单元左侧的运行按钮。
-
-项目已经配置默认解释器，通常会自动找到 `.venv`。
-
-## 验证环境
-
-打开并逐个运行 [环境测试 Notebook](00_环境测试.ipynb) 中的单元格。如果最后显示预测值约为 `10.0`，说明环境正常。
-
-也可以在终端运行：
-
-```bash
-source .venv/bin/activate
-python -c "import numpy, pandas, matplotlib, seaborn, sklearn, torch; print('环境正常')"
-```
-
-## 重新安装依赖
-
-如果以后删除或损坏了 `.venv`，在项目根目录（包含 requirements.txt 的目录）重新创建环境：
+在项目根目录运行；已有 `.venv` 时跳过创建，只安装所需依赖：
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m ipykernel install --prefix .venv --name ml --display-name "ML · Python (.venv)"
 ```
 
-不要使用 `sudo pip install`，以免修改或破坏系统 Python 环境。
+这些依赖支持现有回归、分类与 NumPy/PyTorch 示例。LLM 模型与专题依赖在选择具体任务时再配置。`requirements-tested.txt` 是现有示例的本机版本记录，不是跨平台锁文件。
 
-## 进入神经网络教程
+## 每次学习
 
-分类、NumPy 和 PyTorch 示例统一使用本页的 `.venv` 环境。`requirements.txt` 已包含 PyTorch 与 Notebook 验证依赖；运行方法见 [PyTorch 指南](DEEP_LEARNING.md)。
+```bash
+source .venv/bin/activate
+python -m jupyter lab
+```
 
-NJU 2026 课程也使用同一个 `.venv`，已补充 Transformers、分词、模型加载、计算图和作业测试依赖。具体版本、检查命令和模型文件准备见 [NJU 环境说明](../../library/nju-llm-2026/README.md#环境与模型)。
+在 JupyterLab 选择 `ML · Python (.venv)`；VS Code 打开 Notebook 后选择项目 `.venv/bin/python`。从项目根目录启动，打开路线指定的练习。结束时按 `Control+C` 停止服务，再运行 `deactivate`。
+
+先运行参考程序并解释各段，再在 `work/<任务>/` 保存自己的改动与结果。复制 Notebook 后检查数据、导入与输出路径，避免新实验仍写回参考示例目录。
+
+## 检查与排错
+
+[环境测试 Notebook](00_环境测试.ipynb) 可检查数据分析与线性回归。先查看 `sys.executable`，缺包时在这个解释器里安装依赖；结果异常先重启内核、从头执行。
+
+```bash
+.venv/bin/python -m pip check
+.venv/bin/python scripts/verify_week1.py
+.venv/bin/python scripts/verify_bootcamp.py
+```
+
+两项示例验证使用干净内核，执行副本与结果放进被 Git 忽略的 `outputs/`。无需每次学习全部重跑；修改参考代码或环境后按受影响范围验证。
+
+## 保存到 GitHub
+
+按实际任务选择文件，提交前检查内容：
+
+```bash
+git status --short
+git add -- work/<任务>
+git diff --cached --stat
+git commit -m "study: record experiment"
+git pull --rebase origin main
+git push origin main
+```
+
+`<任务>` 替换为自己的目录名。修改课程文档或示例时同样明确选择对应文件。遇到冲突先检查并解决；模型、缓存、环境和运行输出由 `.gitignore` 隔离。

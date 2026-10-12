@@ -56,4 +56,4 @@ Feature importance、SHAP、attention 等通常解释模型输出对输入的关
 
 答案要点：是否固定第一步 action；用一步 reward 加未来最优价值更新；缺少新 action 的覆盖与反事实；base rate 与错误率约束不兼容；数据/split、metric、seed、预算和选择规则。
 
-配套：[T2](../tests/T2_graduate_ml_final.md) · [P2](../projects/P2_deep_learning_reproduction.md) · [Capstone](../projects/CAPSTONE.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

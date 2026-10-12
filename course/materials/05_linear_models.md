@@ -62,4 +62,4 @@ Ridge 在损失上加 alpha||w||²，使相关特征的权重收缩，降低 var
 
 答案要点：比测试集均值 baseline 更差；误差幅度较一致；不一定，需要校准检查；增加对角项、稳定解并收缩；对参数仍线性；可能产生负预测且方差结构/support 不匹配。
 
-配套：[A03](../../assignments/core/A03/A03_regression_from_scratch.md) · [T1](../tests/T1_undergraduate_midterm.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

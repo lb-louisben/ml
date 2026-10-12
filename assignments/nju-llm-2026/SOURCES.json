@@ -800,7 +800,7 @@
     "a3-main": "assignments/nju-llm-2026/a3",
     "a4-main": "assignments/nju-llm-2026/a4",
     "a5-main": "assignments/nju-llm-2026/a5",
-    "main": "library/nju-llm-2026/assignments/repository/main"
+    "main": "assignments/nju-llm-2026/source/main"
   },
   "layout_note": "Original source paths and hashes are retained; local_roots maps source branches to working-tree locations."
 }

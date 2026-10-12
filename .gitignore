@@ -1,8 +1,4 @@
-# Large overseas originals live in GitHub Releases; indexes and NJU stay in Git.
-/library/*/*
-!/library/*/README.md
-!/library/nju-llm-2026/**
-
+# Runtime environments, models, downloads and generated outputs stay local.
 .idea
 .venv/
 .venv-dl/

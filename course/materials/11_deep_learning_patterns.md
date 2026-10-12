@@ -69,4 +69,4 @@ Autoregressive 模型把 joint probability 分解为条件概率连乘，生成�
 
 答案要点：跨 batch 与单样本特征；推理用完整期望网络；局部 pattern 可跨位置复用；时间链 Jacobian 连乘；数据/split、预算、seed、评价和选择规则；代理目标与下游需求可不一致；逐步条件生成、latent 变分生成、迭代去噪。
 
-配套：[P2](../projects/P2_deep_learning_reproduction.md) · [T3](../tests/T3_dl_llm_oral.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

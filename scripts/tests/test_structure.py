@@ -13,7 +13,7 @@ class StructureTests(unittest.TestCase):
         directory = tempfile.TemporaryDirectory()
         self.addCleanup(directory.cleanup)
         self.root = Path(directory.name)
-        for name in ("README.md", "library/README.md", "library/nju-llm-2026/README.md", "library/nju-llm-2026/LECTURES.md"):
+        for name in ("README.md",):
             self.write(name, "# Fixture\n")
 
     def write(self, name, content):
@@ -40,14 +40,11 @@ class StructureTests(unittest.TestCase):
         errors, *_ = check_structure.check_project(self.root)
         self.assertEqual(errors, [])
 
-    def test_downloaded_materials_optional_but_nju_required(self):
-        self.write("README.md", '[download](library/stanford-cs229-see/notes.pdf)\n[teacher](library/nju-llm-2026/2026/lecture1.md)\n')
+    def test_retired_material_links_fail_without_optional_exemptions(self):
+        self.write("README.md", '[old notes](library/stanford-cs229-see/notes.pdf)\n[old lecture](library/nju-llm-2026/2026/lecture1.md)\n')
         errors, optional, *_ = check_structure.check_project(self.root)
-        self.assertEqual(len(errors), 1)
-        self.assertIn("lecture1.md", errors[0])
-        self.assertEqual(optional, {"library/stanford-cs229-see/notes.pdf"})
-        strict_errors, *_ = check_structure.check_project(self.root, strict_library=True)
-        self.assertEqual(len(strict_errors), 2)
+        self.assertEqual(len(errors), 2)
+        self.assertEqual(optional, set())
 
 
 if __name__ == "__main__":

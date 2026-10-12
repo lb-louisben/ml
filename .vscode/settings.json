@@ -12,7 +12,6 @@
     "assignments/bootcamp/week*/outputs": true
   },
   "search.exclude": {
-    "library/**/unpacked": true,
     "assignments/nju-llm-2026": true,
     "**/*.html": true
   }

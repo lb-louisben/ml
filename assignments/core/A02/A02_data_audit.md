@@ -1,6 +1,6 @@
 # A02：真实数据审计
 
-来源类型：本仓库自制；结构参考 Berkeley Data 100 的 data lifecycle、cleaning 与 EDA。预计 5～7 小时，100 分。
+来源类型：本仓库自制；结构参考 Berkeley Data 100 的 data lifecycle、cleaning 与 EDA。只选与当前单元有关的题，不要求整份完成。
 
 选择一个至少 1,000 行、8 个字段的公开数据集。不要先建复杂模型；这份作业的对象是数据本身。
 
@@ -21,6 +21,6 @@
 - 若标签在不同群体或时间上分布不同，必须展示。
 - 图表标题、坐标、单位和样本量齐全。
 
-## 提交
+## 可保留的成果
 
 data_card.md、audit.ipynb、src/clean.py、reports/data_quality.csv、README.md。原始大数据不要直接提交 Git；在 README 给出获取与校验方式。

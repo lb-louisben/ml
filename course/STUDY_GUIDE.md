@@ -24,6 +24,8 @@
 
 先认识每个家族的用途、输入输出和基本想法，再逐个实现。模型年代、参数量或名字不能代替实验比较；同一个问题先有简单基线。
 
+<a id="prerequisites"></a>
+
 ## 2. 先修知识与课程顺序
 
 已有数学基础的学生用小例子查漏补缺，不安排额外一整门数学课。以下知识在首次使用前补齐：
@@ -46,6 +48,8 @@
 精力有限时，按 **ML → DL → LLM** 完整串行也成立。并行时每次仍只有一个正在实现的项目，不同时提交三份大作业。
 
 每门课定义 12 个教学单元。一个单元可拆为概念课、代码实验和独立练习；它不等于必须在一个自然周内完成。课堂开课可按学期安排，自学按掌握情况推进。
+
+<a id="ml"></a>
 
 ## 3. 第一门课：机器学习 ML
 
@@ -71,6 +75,8 @@
 **项目规模：** 一个小型公开数据集，主要比较线性模型与树/集成模型。其他算法用小型练习了解机制，不把所有模型都塞进项目，也不要求全套竞赛调参。
 
 现有入门代码：[回归项目](../assignments/bootcamp/week1/project/08_Student_performance_project.ipynb)、[分类带练](../assignments/bootcamp/week2/classification_walkthrough.ipynb)。已有 Python/NumPy 基础时直接进入它们，日级补充 Notebook 按需查阅。
+
+<a id="dl"></a>
 
 ## 4. 第二门课：深度学习 DL
 
@@ -99,6 +105,8 @@ D1–D8 是共同主线。D9–D11 在本科课中讲清概念，深度实现按
 
 现有起点：[PyTorch 训练带练](../assignments/bootcamp/week3/02_pytorch_training_walkthrough.ipynb)。[NumPy 手写网络](../assignments/bootcamp/week3/01_numpy_network_walkthrough.ipynb) 用于解释反传和验证实现；不作为开始 PyTorch 前的一整段额外课程。
 
+<a id="llm"></a>
+
 ## 5. 第三门课：大语言模型 LLM
 
 **先修：** PyTorch 训练循环、交叉熵、Embedding、Attention 和 Transformer。可以提前使用现成模型做体验，但模型训练单元依赖这些基础。
@@ -124,7 +132,9 @@ D1–D8 是共同主线。D9–D11 在本科课中讲清概念，深度实现按
 
 L1–L8 是共同主线；L9–L11 根据应用或研究方向选学。Agent 只在明确项目需要时扩展。项目允许小模型与小数据，完整课堂概念不等于必须进行昂贵的大规模预训练。
 
-现有配套：[NJU 作业目录](../assignments/nju-llm-2026/README.md)。A0–A4 按张量运算、归一化、MLP、Attention 与 Transformer 分别选片段，不再要求开始 LLM 前把六份作业全部刷完。自己的 A0 代码和课程笔记保留在 [个人目录](../work/nju-llm-2026/README.md)。
+现有配套：[NJU 作业目录](../assignments/nju-llm-2026/README.md)。A0–A4 按张量运算、归一化、MLP、Attention 与 Transformer 分别选片段，不再要求开始 LLM 前把六份作业全部刷完。选择任务后再在 [个人实验目录](../work/README.md) 建立自己的实现；旧个人副本已清理。
+
+<a id="assessment"></a>
 
 ## 6. 每个模型怎样教，完整代码怎样用
 
@@ -146,6 +156,8 @@ L1–L8 是共同主线；L9–L11 根据应用或研究方向选学。Agent 只
 
 每门课评价：概念与代码解释 20%，核心实现 30%，贯穿项目 40%，复现与反思 10%。分数用于课堂评估，自学时对应掌握证据；不把额外题库和历年考试当作必做清单。
 
+<a id="resources"></a>
+
 ## 7. 公开 GitHub 材料如何融合
 
 选择标准：能公开访问代码；能取得所需的小数据；有清楚的许可/来源；可用当前环境做有限范围的实验。只采用与当前单元有关的题目、测试或工程结构，不整包收集校内网站、讲义和参考书。原课程私有评分器、账号和大算力要求不成为本项目依赖。
@@ -156,9 +168,11 @@ L1–L8 是共同主线；L9–L11 根据应用或研究方向选学。Agent 只
 | [Stanford CS230 代码示例](https://github.com/cs230-stanford/cs230-code-examples) | D1/D4/D6：训练工程、视觉与序列代码 | 学习文件职责和训练流程；老接口需要小范围适配与实际验证 |
 | [PyTorch 官方 MNIST 示例](https://github.com/pytorch/examples/tree/main/mnist) | D1/D4：完整训练/评估范例 | 作为工程阅读对照；教学小实验可使用已内置的小数据 |
 | [Stanford CS336 2025 A1 历史提交](https://github.com/stanford-cs336/assignment1-basics/tree/1076cb9741ca280afd71e6d768ddd09ab42e9c4d) | D7/D8/L2/L4：核心模块与测试 | 固定 2025-04-16 提交，仅选适合的小测试；完整作业与 GPU 排行榜要求不作为入门任务 |
-| [NJU 公开作业](https://github.com/NJUDeepEngine/open-llm-assignments) | 张量操作到 Transformer 的逐层练习 | 本地已有模板与个人实现，按单元复用，不再增加整套重复练习 |
+| [NJU 公开作业](https://github.com/NJUDeepEngine/open-llm-assignments) | 张量操作到 Transformer 的逐层练习 | 本地已有固定模板，按单元复用，不再增加整套重复练习 |
 
-这些 GitHub 仓库的公开性已核查；它们是候选来源，表中的融合规则不等于所有旧代码或数据依赖已经验证可运行。项目中现有 13 本入门 Notebook 已有执行记录，后续引入的片段须逐个验证后标记为可用。
+这些 GitHub 仓库的公开性已核查；它们是候选来源，表中的融合规则不等于所有旧代码或数据依赖已经验证可运行。项目中现有 13 本入门 Notebook 已有执行记录，保留可运行代码，后续引入的片段须逐个验证后标记为可用。
+
+<a id="start"></a>
 
 ## 8. 你现在从哪里开始
 

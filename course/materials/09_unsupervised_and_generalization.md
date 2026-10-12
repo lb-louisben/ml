@@ -46,4 +46,4 @@ empirical risk 是训练样本平均损失；expected risk 是对真实分布的
 
 答案要点：局部最优；算 latent posterior/最大化期望 complete likelihood；目标只优化几何/概率结构；从更多噪声中选极值；concept shift，旧映射本身失效。
 
-配套：[T1](../tests/T1_undergraduate_midterm.md) · [T2](../tests/T2_graduate_ml_final.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

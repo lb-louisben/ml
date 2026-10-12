@@ -58,4 +58,4 @@ X 的两列分别为 [1,2]ᵀ 和 [2,4]ᵀ。第二列是第一列的两倍，�
 
 答案要点：100×1、5×5；存在 null-space 参数方向；一阶最优条件；对应方向信息/能量弱且反演不稳定；避免泄漏并保持同一坐标系。
 
-配套：[A01](../../assignments/core/A01/A01_math_and_optimization.md) · [T0](../tests/T0_math_diagnostic.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

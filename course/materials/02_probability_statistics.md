@@ -59,4 +59,4 @@ MAP 最大化 likelihood × prior，等价于最大化 log-likelihood + log-prio
 
 答案要点：5 与 36；假阳性基数大；MAP 加 prior；系统偏差/错误数据生成过程；把固定参数说成有 95% 后验概率。
 
-配套：[A01](../../assignments/core/A01/A01_math_and_optimization.md) · [T0](../tests/T0_math_diagnostic.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

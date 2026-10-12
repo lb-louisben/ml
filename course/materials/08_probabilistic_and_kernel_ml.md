@@ -46,4 +46,4 @@ moons 数据在线性空间不可被一条直线良好分开。RBF kernel 可以
 
 答案要点：二次项抵消；低 variance 且只需相对 posterior；靠近/违反 margin 并决定边界的点；少容错与窄局部相似；高维 feature map。
 
-配套：[A05](../../assignments/core/A05/A05_probabilistic_and_kernel_ml.md) · [T2](../tests/T2_graduate_ml_final.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

@@ -8,11 +8,4 @@ ipykernel
 torch
 nbformat
 nbclient
-# NJU 2026 lectures and local Qwen3 model
-transformers>=4.56.1,<5
-huggingface-hub>=0.34,<1
-accelerate
-safetensors
-torchviz
-graphviz
 pytest

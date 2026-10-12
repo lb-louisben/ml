@@ -52,7 +52,7 @@ def main():
         try:
             if not python.is_file():
                 raise RuntimeError(
-                    f"Missing {interpreter}; follow docs/setup/DEEP_LEARNING.md "
+                    f"Missing {interpreter}; follow docs/setup/README.md "
                     "for PyTorch or docs/setup/README.md for the core environment."
                 )
             notebook = nbformat.read(source, as_version=4)

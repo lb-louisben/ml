@@ -1,7 +1,6 @@
 """Check maintained document links, notebook JSON and project Python syntax offline.
 
 Run from any directory: python3 /path/to/project/scripts/check_structure.py
-Downloaded materials from other schools are optional; --strict-library requires them.
 Teacher source files, notebook outputs and runtime directories are not scanned.
 """
 
@@ -34,32 +33,21 @@ def markdown_links(text):
                 yield number, match.group(1) or match.group(2)
 
 
-def optional_library_file(root, target):
-    try:
-        parts = target.relative_to(root / "library").parts
-    except ValueError:
-        return False
-    return len(parts) >= 2 and parts[0] != "nju-llm-2026" and parts[1:] != ("README.md",)
-
-
-def check_project(root, strict_library=False):
+def check_project(root):
     root = root.resolve()
     errors, optional = [], set()
-    documents = [root / "README.md", root / "library/README.md"]
-    documents.extend((root / "library").glob("*/README.md"))
-    documents.append(root / "library/nju-llm-2026/LECTURES.md")
+    documents = [root / "README.md"]
     notebooks = []
     for name in ("assignments", "course", "docs", "work", "scripts"):
         for path in (root / name).rglob("*"):
             if SKIP.intersection(path.relative_to(root).parts):
                 continue
-            # NJU a0-a5 are preserved upstream assignment packages, like the
-            # teacher files in library/. Check their maintained entry page,
-            # while keeping original task links and notebook contents intact.
+            # Check the maintained NJU entry page; preserved upstream packages
+            # retain their original task links and notebook contents.
             parts = path.relative_to(root / name).parts
             if (name == "assignments" and len(parts) > 1
                     and parts[0] == "nju-llm-2026"
-                    and parts[1] in {f"a{number}" for number in range(6)}):
+                    and parts[1] in {"source", *(f"a{number}" for number in range(6))}):
                 continue
             if path.suffix == ".md":
                 documents.append(path)
@@ -73,9 +61,6 @@ def check_project(root, strict_library=False):
                 continue
             target = (path.parent / unquote(url.path)).resolve()
             if target.exists():
-                continue
-            if not strict_library and optional_library_file(root, target):
-                optional.add(target.relative_to(root).as_posix())
                 continue
             errors.append(f"{path.relative_to(root)}{cell}:{line}: missing {destination}")
 
@@ -97,7 +82,6 @@ def check_project(root, strict_library=False):
             errors.append(f"{path.relative_to(root)}: invalid notebook: {exc}")
 
     sources = sorted((root / "scripts").rglob("*.py"))
-    sources += sorted((root / "docs/archive").glob("*.py"))
     sources += sorted((root / "assignments/bootcamp").rglob("*.py"))
     for path in sources:
         if SKIP.intersection(path.relative_to(root).parts):
@@ -117,13 +101,10 @@ def check_project(root, strict_library=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--strict-library", action="store_true", help="Require locally downloaded school files too")
-    args = parser.parse_args()
-    errors, optional, docs, notebooks, sources = check_project(ROOT, args.strict_library)
+    parser.parse_args()
+    errors, _, docs, notebooks, sources = check_project(ROOT)
     for error in errors:
         print(f"FAIL {error}")
-    if optional:
-        print(f"SKIP {len(optional)} absent optional school files; download them or use --strict-library")
     print(f"{'FAIL' if errors else 'PASS'} structure: {docs} documents, {notebooks} notebooks, {sources} Python files; {len(errors)} errors")
     return bool(errors)
 

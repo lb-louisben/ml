@@ -1,6 +1,6 @@
 # A08：RAG 的检索与答案评价
 
-来源类型：本仓库自制；参考 Stanford CS224N 的 RAG/agent/evaluation 单元。预计 8～12 小时，100 分。
+来源类型：本仓库自制；参考 Stanford CS224N 的 RAG/agent/evaluation 单元。只选与当前单元有关的题，不要求整份完成。
 
 ## 目标
 

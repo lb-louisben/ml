@@ -54,4 +54,4 @@
 
 答案要点：测试统计参与训练；身份依赖与时间因果顺序；否则 validation 信息进入特征集合；判断学习是否带来价值并校验流程；基于固定规则且不读取数据统计的纯变换。
 
-配套：[A02](../../assignments/core/A02/A02_data_audit.md) · [P1](../projects/P1_tabular_benchmark.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。

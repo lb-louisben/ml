@@ -54,4 +54,4 @@ f(w)=w²，w=4，gradient=8。learning rate=0.1 时新 w=4-0.8=3.2，新 loss �
 
 答案要点：2x(wx-y)；前者算梯度、后者更新；震荡/NaN/不降；改善各方向尺度与条件数；公式、shape/axis、随机层、epsilon/精度。
 
-配套：[A01](../../assignments/core/A01/A01_math_and_optimization.md) · [A06](../../assignments/core/A06/A06_backprop_and_training.md)
+当前练习与掌握标准统一见 [课程路线](../STUDY_GUIDE.md)。
