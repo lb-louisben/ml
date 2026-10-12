@@ -71,7 +71,7 @@ class CheckoutTests(unittest.TestCase):
         self.catalog = checkout.parse_catalog(CONFIG_DATA)
 
     def test_catalog_profiles_select_only_corresponding_homework(self):
-        expected = {"all-exercises", "bootcamp", "week1", "week2", "week3", "core", "nju"}
+        expected = {"ml", "dl", "llm", "all-exercises", "bootcamp", "week1", "week2", "week3", "core", "nju"}
         expected.update("core-a{:02}".format(number) for number in range(1, 9))
         expected.update("nju-a{}".format(number) for number in range(6))
         self.assertEqual(set(self.catalog.profiles), expected)
@@ -91,6 +91,17 @@ class CheckoutTests(unittest.TestCase):
         self.assertIn("/assignments/nju-llm-2026/SOURCES.json", nju)
         self.assertNotIn("/work/nju-llm-2026/", nju)
         self.assertNotIn("/assignments/nju-llm-2026/a1/", nju)
+        ml = checkout.build_patterns(self.catalog, ["ml"])
+        self.assertIn("/work/courses/ml/", ml)
+        self.assertIn("/assignments/bootcamp/week1/", ml)
+        self.assertNotIn("/work/courses/dl/", ml)
+        self.assertNotIn("/assignments/nju-llm-2026/a0/", ml)
+        dl = checkout.build_patterns(self.catalog, ["dl"])
+        self.assertIn("/work/courses/dl/", dl)
+        self.assertIn("/assignments/bootcamp/week3/", dl)
+        llm = checkout.build_patterns(self.catalog, ["llm"])
+        self.assertIn("/work/courses/llm/", llm)
+        self.assertIn("/assignments/nju-llm-2026/a4/", llm)
 
     def test_patterns_are_literal_files_and_directories_without_sibling_expansion(self):
         patterns = checkout.build_patterns(self.catalog, ["core-a01", "nju-a0", "core-a01"])

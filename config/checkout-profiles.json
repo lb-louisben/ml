@@ -15,6 +15,82 @@
     "requirements.txt"
   ],
   "profiles": {
+    "ml": {
+      "description": "机器学习：现有回归/分类示例、按需补充题与个人实验",
+      "paths": [
+        "assignments/bootcamp/week1",
+        "work/bootcamp/week1",
+        "assignments/bootcamp/week2",
+        "work/bootcamp/week2",
+        "assignments/core/A01",
+        "work/assignments/A01",
+        "assignments/core/A02",
+        "work/assignments/A02",
+        "assignments/core/A03",
+        "work/assignments/A03",
+        "assignments/core/A04",
+        "work/assignments/A04",
+        "assignments/core/A05",
+        "work/assignments/A05",
+        "work/courses/ml"
+      ],
+      "files": [
+        "course/TRACKER.md",
+        "assignments/bootcamp/README.md",
+        "assignments/core/README.md"
+      ]
+    },
+    "dl": {
+      "description": "深度学习：MLP/PyTorch、核心模块模板与个人实验",
+      "paths": [
+        "assignments/bootcamp/week3",
+        "work/bootcamp/week3",
+        "assignments/core/A06",
+        "work/assignments/A06",
+        "assignments/core/A07",
+        "work/assignments/A07",
+        "assignments/nju-llm-2026/a0",
+        "work/nju-llm-2026/a0",
+        "assignments/nju-llm-2026/a1",
+        "work/nju-llm-2026/a1",
+        "assignments/nju-llm-2026/a2",
+        "work/nju-llm-2026/a2",
+        "assignments/nju-llm-2026/a3",
+        "work/nju-llm-2026/a3",
+        "assignments/nju-llm-2026/a4",
+        "work/nju-llm-2026/a4",
+        "work/courses/dl"
+      ],
+      "files": [
+        "course/TRACKER.md",
+        "assignments/bootcamp/README.md",
+        "assignments/core/README.md",
+        "assignments/nju-llm-2026/SOURCES.json",
+        "assignments/nju-llm-2026/README.md"
+      ]
+    },
+    "llm": {
+      "description": "LLM：Attention/Transformer/Llama 模板、选做 RAG 与个人实验",
+      "paths": [
+        "assignments/core/A07",
+        "work/assignments/A07",
+        "assignments/core/A08",
+        "work/assignments/A08",
+        "assignments/nju-llm-2026/a3",
+        "work/nju-llm-2026/a3",
+        "assignments/nju-llm-2026/a4",
+        "work/nju-llm-2026/a4",
+        "assignments/nju-llm-2026/a5",
+        "work/nju-llm-2026/a5",
+        "work/courses/llm"
+      ],
+      "files": [
+        "course/TRACKER.md",
+        "assignments/core/README.md",
+        "assignments/nju-llm-2026/SOURCES.json",
+        "assignments/nju-llm-2026/README.md"
+      ]
+    },
     "all-exercises": {
       "description": "全部作业及对应个人实现",
       "paths": [
@@ -51,13 +127,17 @@
         "assignments/nju-llm-2026/a4",
         "work/nju-llm-2026/a4",
         "assignments/nju-llm-2026/a5",
-        "work/nju-llm-2026/a5"
+        "work/nju-llm-2026/a5",
+        "work/courses/ml",
+        "work/courses/dl",
+        "work/courses/llm"
       ],
       "files": [
         "assignments/nju-llm-2026/SOURCES.json",
         "assignments/bootcamp/README.md",
         "assignments/core/README.md",
-        "assignments/nju-llm-2026/README.md"
+        "assignments/nju-llm-2026/README.md",
+        "course/TRACKER.md"
       ]
     },
     "bootcamp": {
