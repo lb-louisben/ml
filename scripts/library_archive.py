@@ -16,6 +16,7 @@ import stat
 import subprocess
 import tarfile
 import tempfile
+import time
 from pathlib import Path, PurePosixPath
 from zipfile import ZipFile
 
@@ -371,6 +372,17 @@ def verify_remote_asset(remote: dict, expected: dict) -> None:
         raise ArchiveError(f"Remote asset size/digest differs or upload incomplete: {expected['name']}; refusing to overwrite")
 
 
+def created_release_info(manifest: dict) -> dict | None:
+    """Allow the release listing to catch up after creating a draft."""
+    for attempt in range(4):
+        release = release_info(manifest)
+        if release is not None:
+            return release
+        if attempt < 3:
+            time.sleep(2 ** attempt)
+    return None
+
+
 def publish(manifest_path: Path, cache: Path, target: str | None = None, tag: str | None = None) -> dict:
     manifest = load_manifest(manifest_path)
     if tag is not None and tag != manifest["tag"]:
@@ -393,7 +405,7 @@ def publish(manifest_path: Path, cache: Path, target: str | None = None, tag: st
         if target:
             args.extend(["--target", target])
         run_gh(args)
-        release = release_info(manifest)
+        release = created_release_info(manifest)
         if release is None:
             raise ArchiveError("Release was created but cannot be inspected")
     remote = {asset["name"]: asset for asset in release.get("assets", [])}

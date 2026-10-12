@@ -267,6 +267,15 @@ class LibraryArchiveTests(unittest.TestCase):
         self.assertTrue(state["release"]["draft"])
         self.assertTrue(all(call[0] == "api" for call in self.calls))
 
+    def test_new_draft_waits_for_release_listing_visibility(self):
+        manifest = self.build()
+        expected = {"id": 123, "tag_name": manifest["tag"], "draft": True}
+        with patch.object(archive, "release_info", side_effect=[None, None, expected]) as lookup, \
+                patch.object(archive.time, "sleep") as sleep:
+            self.assertEqual(archive.created_release_info(manifest), expected)
+        self.assertEqual(lookup.call_count, 3)
+        self.assertEqual([call.args[0] for call in sleep.call_args_list], [1, 2])
+
     def test_publish_corrupt_api_digest_stays_draft(self):
         self.build()
         state = {"release": None, "corrupt_upload": True}
