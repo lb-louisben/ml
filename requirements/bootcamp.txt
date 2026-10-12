@@ -1,0 +1,10 @@
+# Week 1/2 data exercises and notebook tooling. Install torch separately for Week 3.
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+ipykernel
+nbformat
+nbclient
+jupyterlab

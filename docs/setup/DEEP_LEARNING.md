@@ -1,6 +1,6 @@
 # Week 3：PyTorch 环境与第一次运行
 
-[项目首页](../../README.md) · [环境配置](README.md) · [Week 3 教程](../../course/bootcamp/week3/README.md)
+[项目首页](../../README.md) · [环境配置](README.md) · [Week 3 教程](../../assignments/bootcamp/week3/README.md)
 
 全部课程统一使用项目原有的 `.venv`，包含分类、NumPy 和 PyTorch 示例。示例默认 CPU，使用 scikit-learn 自带的 digits 数据，无需下载训练数据或购买 GPU。
 
@@ -25,7 +25,7 @@ NJU 大语言模型课程也使用这个环境，额外依赖和 Graphviz 说明
 .venv/bin/python -m jupyter lab
 ```
 
-打开 [PyTorch 带练 Notebook](../../course/bootcamp/week3/02_pytorch_training_walkthrough.ipynb)。在 JupyterLab 中选择 `ML · Python (.venv)` 内核，在 VS Code 中选择项目的 `.venv/bin/python`。第一段代码打印的 Python 路径应位于本项目的 `.venv` 中。
+打开 [PyTorch 带练 Notebook](../../assignments/bootcamp/week3/02_pytorch_training_walkthrough.ipynb)。在 JupyterLab 中选择 `ML · Python (.venv)` 内核，在 VS Code 中选择项目的 `.venv/bin/python`。第一段代码打印的 Python 路径应位于本项目的 `.venv` 中。
 
 环境合并后，已打开的 Notebook 需要重新选择内核并重启，再从头运行。
 

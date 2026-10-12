@@ -15,13 +15,13 @@ from jupyter_client import KernelManager
 ROOT = Path(__file__).resolve().parents[1]
 LESSONS = {
     "classification": (
-        "course/bootcamp/week2/classification_walkthrough.ipynb", ".venv/bin/python"
+        "assignments/bootcamp/week2/classification_walkthrough.ipynb", ".venv/bin/python"
     ),
     "numpy": (
-        "course/bootcamp/week3/01_numpy_network_walkthrough.ipynb", ".venv/bin/python"
+        "assignments/bootcamp/week3/01_numpy_network_walkthrough.ipynb", ".venv/bin/python"
     ),
     "pytorch": (
-        "course/bootcamp/week3/02_pytorch_training_walkthrough.ipynb", ".venv/bin/python"
+        "assignments/bootcamp/week3/02_pytorch_training_walkthrough.ipynb", ".venv/bin/python"
     ),
 }
 

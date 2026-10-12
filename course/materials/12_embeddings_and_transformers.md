@@ -60,4 +60,4 @@ Self-attention 本身对输入顺序没有足够区分，需要 absolute、relat
 
 答案要点：数学等价；控制点积方差/softmax 饱和；未来泄漏与无效 padding；顺序；目标/分布与真实任务不一致。
 
-配套：[A07](../assignments/A07_transformer_from_scratch.md) · [T3](../tests/T3_dl_llm_oral.md)
+配套：[A07](../../assignments/core/A07/A07_transformer_from_scratch.md) · [T3](../tests/T3_dl_llm_oral.md)

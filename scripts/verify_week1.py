@@ -1,4 +1,4 @@
-"""Execute only the newly authored lessons; never overwrite source notebooks."""
+"""Execute every Week 1 notebook in fresh kernels without changing sources."""
 from pathlib import Path
 import os
 import sys
@@ -6,7 +6,7 @@ import nbformat
 from nbclient import NotebookClient
 
 ROOT = Path(__file__).resolve().parents[1]
-WEEK1 = ROOT / "course/bootcamp/week1"
+WEEK1 = ROOT / "assignments/bootcamp/week1"
 OUTPUT = WEEK1 / "outputs/verified"
 OUTPUT.mkdir(parents=True, exist_ok=True)
 for key, folder in {
@@ -20,7 +20,9 @@ for key, folder in {
     os.environ.setdefault(key, str(folder))
 
 FILES = [
+    "day1/01_Python_basic_and_score_analyze.ipynb",
     "day1/01_Python_depth_breadth_bonus.ipynb",
+    "day2/02_NumPy.ipynb",
     "day2/02_NumPy_depth_breadth_bonus.ipynb",
     "day3/03_Pandas_data_cleaning.ipynb",
     "day4/04_Visualization_EDA.ipynb",

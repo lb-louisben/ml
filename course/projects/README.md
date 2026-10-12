@@ -4,7 +4,7 @@
 
 | 项目 | 阶段 | 周期 | 入口 |
 |---|---|---:|---|
-| P0 学生成绩回归 | 阶段 0 | 已包含于 Week 1 | [现有 Notebook](../bootcamp/week1/project/08_Student_performance_project.ipynb) |
+| P0 学生成绩回归 | 阶段 0 | 已包含于 Week 1 | [现有 Notebook](../../assignments/bootcamp/week1/project/08_Student_performance_project.ipynb) |
 | P1 表格模型 benchmark | 阶段 2 | 1～2 周 | [项目说明](P1_tabular_benchmark.md) |
 | P2 深度学习复现 | 阶段 4 | 3～4 周 | [项目说明](P2_deep_learning_reproduction.md) |
 | P3 最终 Capstone | 阶段 6 | 4 周 | [项目说明](CAPSTONE.md) |

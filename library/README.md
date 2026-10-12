@@ -16,6 +16,18 @@
 | [Stanford CS231n · 2025 slides / 2026 作业包](stanford-cs231n-2025/README.md) | 26 | 讲义、练习、代码或考试；详见课程目录 |
 | [Stanford CS224N · Winter 2025 · NLP 与 Transformer](stanford-cs224n-w25/README.md) | 46 | 讲义、练习、代码或考试；详见课程目录 |
 
+## 完整存储与服务器使用
+
+[GitHub 存储与恢复方案](../docs/GITHUB_STORAGE.md) · [服务器只拉作业教程](../docs/SERVER_GUIDE.md)
+
+海外原件保存在本仓库的 GitHub Releases；恢复全部用 `python3 scripts/library_archive.py restore --all`。只做某份海外作业时使用 `fetch --file <课程/ZIP文件>`，不会下载讲义归档。
+
+## 单独同步的课程
+
+[NJU 2026 大语言模型课程](nju-llm-2026/README.md) · [讲义目录](nju-llm-2026/LECTURES.md) · [个人学习副本](../work/nju-llm-2026/README.md)
+
+NJU 资料使用独立来源清单，不计入上方归档数量与大小。仅补充新增讲义：`python3 scripts/sync_nju.py lectures`；作业保留固定快照。
+
 ## 下载与复查
 
 [来源与校验清单](manifest.json)记录每份文件的 URL、来源页面、大小与 SHA256。原课程页面也保存了 HTML 快照；页面中的远程链接可能仍需联网。

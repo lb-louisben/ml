@@ -34,7 +34,8 @@ JupyterLab 选择 **ML · Python (.venv)** 内核，再打开下表的学习 Not
 
 | 位置（相对项目根目录） | 放什么 |
 |---|---|
-| `library/nju-llm-2026/` | 本页、老师讲义、作业原始模板及来源记录 |
+| `library/nju-llm-2026/` | 本页、老师讲义、旧博客题面及来源记录 |
+| `assignments/nju-llm-2026/` | A0～A5 原始作业模板、题目、测试与来源清单 |
 | `work/nju-llm-2026/` | 自己修改的 Notebook、作业实现、笔记和测试 |
 | `.cache/` | 模型、下载缓存和运行输出，不提交 Git |
 
@@ -42,16 +43,16 @@ JupyterLab 选择 **ML · Python (.venv)** 内核，再打开下表的学习 Not
 
 ## 作业
 
-[官方公开作业仓库](https://github.com/NJUDeepEngine/open-llm-assignments) 的 main 和六个作业分支已一次性归档，后续不再拉取。以下直接进入老师的任务说明与源码：
+[官方公开作业仓库](https://github.com/NJUDeepEngine/open-llm-assignments) 的 main 和六个作业分支已一次性归档，后续不再拉取；作业模板已独立到 [作业目录](../../assignments/nju-llm-2026/README.md)，服务器按 [最小检出教程](../../docs/SERVER_GUIDE.md) 只取需要的练习。以下直接进入老师的任务说明与源码：
 
 | 编号 | 内容 | 题目 | 原始模板说明 |
 |---|---|---|---|
-| A0 | Onboarding / MatMul with Importance | [tasks](assignments/repository/a0-main/tasks/) | [a0-main](assignments/repository/a0-main/README.md) |
-| A1 | Norm + Embedding | [tasks](assignments/repository/a1-main/tasks/) | [a1-main](assignments/repository/a1-main/README.md) |
-| A2 | MLP | [tasks](assignments/repository/a2-main/tasks/) | [a2-main](assignments/repository/a2-main/README.md) |
-| A3 | Attention | [tasks](assignments/repository/a3-main/tasks/) | [a3-main](assignments/repository/a3-main/README.md) |
-| A4 | Transformer | [tasks](assignments/repository/a4-main/tasks/) | [a4-main](assignments/repository/a4-main/README.md) |
-| A5 | Exploring Llama | [tasks](assignments/repository/a5-main/tasks/) | [a5-main](assignments/repository/a5-main/README.md) |
+| A0 | Onboarding / MatMul with Importance | [tasks](../../assignments/nju-llm-2026/a0/tasks/) | [a0](../../assignments/nju-llm-2026/a0/README.md) |
+| A1 | Norm + Embedding | [tasks](../../assignments/nju-llm-2026/a1/tasks/) | [a1](../../assignments/nju-llm-2026/a1/README.md) |
+| A2 | MLP | [tasks](../../assignments/nju-llm-2026/a2/tasks/) | [a2](../../assignments/nju-llm-2026/a2/README.md) |
+| A3 | Attention | [tasks](../../assignments/nju-llm-2026/a3/tasks/) | [a3](../../assignments/nju-llm-2026/a3/README.md) |
+| A4 | Transformer | [tasks](../../assignments/nju-llm-2026/a4/tasks/) | [a4](../../assignments/nju-llm-2026/a4/README.md) |
+| A5 | Exploring Llama | [tasks](../../assignments/nju-llm-2026/a5/tasks/) | [a5](../../assignments/nju-llm-2026/a5/README.md) |
 
 **编号以代码仓库为准。** [旧博客题面快照](assignments/BLOG.md) 仅作参考：博客 A0 是环境引导、A1 才是矩阵乘法，与代码仓库编号不同。HTML 中的样式、图片和公式脚本仍需联网。
 
@@ -59,7 +60,7 @@ JupyterLab 选择 **ML · Python (.venv)** 内核，再打开下表的学习 Not
 
 ```bash
 if [ ! -e work/nju-llm-2026/a0 ]; then
-  cp -R library/nju-llm-2026/assignments/repository/a0-main work/nju-llm-2026/a0
+  cp -R assignments/nju-llm-2026/a0 work/nju-llm-2026/a0
 fi
 ```
 
@@ -73,6 +74,16 @@ fi
 
 无需 Classroom、学号、评分 webhook 或官方评分服务；`test_with_ref.py` 需要未公开的 `ref` 包，自学时跳过。用公开测试及自己补充的 PyTorch / Autograd 对照测试验收，在个人作业记录中写清实现范围、命令、结果和未完成部分。本地通过不代表官方隐藏测试分数。
 
+老师说明中的 NVIDIA GPU 是可选项，但作业 `requirements.txt` 仍无条件列出了 `triton`，所以 Mac 上整套安装会失败。A0 的源码和公开测试只需要 `torch`、`pytest`，测试默认使用 CPU；本项目共用环境已具备这两个包，无需为 A0 安装 Triton。
+
+在已激活 `.venv` 的 A0 目录中，完成实现后运行：
+
+```bash
+python -m pytest test_toy.py -q
+```
+
+若另建环境，A0 最小安装命令为 `python -m pip install "torch>=2.1.0" "pytest>=7.4.2"`。本机已确认源码与测试可导入、公开用例可收集、CPU 矩阵乘法正常、`pip check` 无冲突；这不表示作业 TODO 已完成。其他作业要按实际源码依赖检查，不能据此认定都只需这两个包。
+
 老师的 requirements 包含 NVIDIA/CUDA 的 Triton 等依赖，不能在本机 Mac 上原样全装。A5 的 Llama 权重与数据只有获取说明，尚未下载；已下载的 Qwen3 用于讲义。
 
 ## 同步与保存
@@ -85,7 +96,7 @@ python3 scripts/sync_nju.py lectures
 
 来源是 [官方讲义仓库](https://github.com/NJUDeepEngine/llm-course-lecture) `main` 分支的 `2026/`，连同引用的配图同步。本机也可用 `git sync-lectures`。默认使用当前代理；代理不可用且能够直连时加 `--direct`。
 
-脚本检测到本地修改时会停止替换，先将自己的版本移到 `work/` 再同步。下载失败可重试，`0 updated` 表示内容一致。上游移除的旧文件保留在本地，当前文件以讲义清单为准。
+同步只补充本地不存在的新文件，已有讲义和 Notebook 一律保留，包括你的修改和完成内容；老师对同名文件的更新也不会覆盖本地版本。自动生成的讲义目录会更新（手动改过则保留）。下载失败可重试，`0 updated` 表示没有新增文件。上游删除的文件也保留。
 
 旧命令 `git sync-assignments` 仅提示已归档，不联网、不改文件；`git sync-nju` 或 `python3 scripts/sync_nju.py all` 只更新讲义并跳过作业。
 
@@ -98,7 +109,7 @@ git status
 # 自己的学习成果
 git add -- work/nju-llm-2026
 # 如果也更新了老师资料
-git add -- library/nju-llm-2026
+git add -- library/nju-llm-2026 assignments/nju-llm-2026
 git diff --cached --stat
 git commit -m "study: update NJU course work"
 git push
@@ -144,7 +155,7 @@ Python 的 graphviz 包不能替代原生 `dot`；找不到绘图程序时用 `d
 ## 来源记录
 
 - [讲义清单与校验值](manifest.json)：记录官方提交、文件树及逐文件校验值。
-- [作业分支与校验值](assignments/repository-manifest.json)：7 个分支、130 个原始文件的一次性快照。
+- [作业分支与校验值](../../assignments/nju-llm-2026/SOURCES.json)：7 个分支、130 个原始文件的一次性快照。
 - [旧博客快照清单](assignments/manifest.json)：保留历史题面来源。
 
 老师目录中的 README、LICENSE 和任务说明是原始资料的一部分，保留原样；本项目的课程使用说明统一维护在本页。

@@ -4,7 +4,7 @@ set -euo pipefail
 NJU_PROJECT_ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$NJU_PROJECT_ROOT"
 if [[ ! -x .venv/bin/python ]]; then
-  echo '缺少 .venv，请按 docs/setup/NJU.md 创建环境。' >&2
+  echo '缺少 .venv，请按 docs/setup/README.md 创建环境；NJU 运行说明见 library/nju-llm-2026/README.md。' >&2
   exit 1
 fi
 export LECTURE4_MODEL_PATH="$NJU_PROJECT_ROOT/.cache/llm-course/qwen3-tokenizer"

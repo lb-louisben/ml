@@ -1,321 +1,399 @@
 {
-  "retrieved_at": "2026-09-22T11:46:45.177173+00:00",
+  "retrieved_at": "2026-10-11T11:30:03.675386+00:00",
   "repository": "https://github.com/NJUDeepEngine/llm-course-lecture",
-  "commit": "db4a461a622110ba47bdaafd6c58c921b465e5a9",
-  "tree": "db4a461a622110ba47bdaafd6c58c921b465e5a9",
+  "commit": "171b867f595108e6861292bfff6e5c3428eeb304",
+  "tree": "171b867f595108e6861292bfff6e5c3428eeb304",
+  "policy": "add-only; preserve existing course files",
   "resources": [
     {
       "file": "2026/lecture1.md",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/lecture1.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/lecture1.md",
       "bytes": 9672,
       "sha256": "8857c5e973e4adf6c20e20f7ce2c6925d53d036078e24be5f54afa3ee58963a3",
       "git_blob_sha": "d9a5130d262f1de4ca328a3a8603f9231b5cfc88"
     },
     {
       "file": "2026/lecture2.md",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/lecture2.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/lecture2.md",
       "bytes": 12403,
       "sha256": "0e7152ad38d19166cddf22476ba09cbcbe5ea907dd842b3b58185bbd6aae719a",
       "git_blob_sha": "3af835bc70244f431cd7a5a2650286ad55681136"
     },
     {
       "file": "2026/lecture3-check.md",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/lecture3-check.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/lecture3-check.md",
       "bytes": 1249,
       "sha256": "f2eb76d3e1e146590f60dbd2cc1361c3a16f33aff291df441f826bcbbbc2a36c",
       "git_blob_sha": "0e2d52ac66f44cf2e23d71d33d7976a8c2965211"
     },
     {
       "file": "2026/lecture3.md",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/lecture3.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/lecture3.md",
       "bytes": 16482,
       "sha256": "4e818e3232afb935d13cb6f5724c4348704ebcff74da9b63f751dd3d8486aa99",
       "git_blob_sha": "132c4a489670b55641524b9494424fa34509e665"
     },
     {
       "file": "2026/lecture4.md",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/lecture4.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/lecture4.md",
       "bytes": 23685,
       "sha256": "15c85edbf2c1d85057ae114ae48595ff056c6c10e4677e1428a0f892cf747e02",
       "git_blob_sha": "219061c910888bd0da51a64312f0dfd18d2c12a2"
     },
     {
+      "file": "2026/lecture5.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/lecture5.md",
+      "bytes": 17753,
+      "sha256": "26460ee1b1c84e9d6a3790a75cde513c2da132cdf623ddad655875fb19f743b7",
+      "git_blob_sha": "b0254ec14e9dc7ddd4f1573783a22dde48ca91f9"
+    },
+    {
       "file": "2026/notebook/lecture1.ipynb",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/notebook/lecture1.ipynb",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/notebook/lecture1.ipynb",
       "bytes": 12810,
       "sha256": "2a586135c44be7bd595df3dfa4cc03f3a50911fa0f2454bb66251b40616d1396",
       "git_blob_sha": "a43eca827169ba5bf944bf74faa7e9b0594281e7"
     },
     {
       "file": "2026/notebook/lecture2.ipynb",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/notebook/lecture2.ipynb",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/notebook/lecture2.ipynb",
       "bytes": 29074,
       "sha256": "ac11b96b4fd4461975210986061b15f1554b3898d62a8a8cc6c20bdcf462250e",
       "git_blob_sha": "af2d8c104bd37d6cbc6a6a35465c699b2bfd177d"
     },
     {
       "file": "2026/notebook/lecture3.ipynb",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/notebook/lecture3.ipynb",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/notebook/lecture3.ipynb",
       "bytes": 24123,
       "sha256": "41522e4559137d7796e9186dedea55792ae4f023fa20025578145b2c1fbcef8e",
       "git_blob_sha": "c43ef53041eef38b0e1105878663836c3bd8f529"
     },
     {
       "file": "2026/notebook/lecture4-README.md",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/notebook/lecture4-README.md",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/notebook/lecture4-README.md",
       "bytes": 1026,
       "sha256": "a1f84ec222d9f6bcaa5e518ee79334e25a9389034c02b460b0510509c70812f3",
       "git_blob_sha": "52e67916e6fe9378359f531900e9db2816e074a9"
     },
     {
       "file": "2026/notebook/lecture4.ipynb",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/2026/notebook/lecture4.ipynb",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/notebook/lecture4.ipynb",
       "bytes": 42905,
       "sha256": "81a57644820c9772e823fe6f9d100272afc9dbe070f875a5492ea6e628356b31",
       "git_blob_sha": "58a5a5083e9335897803c5febe4c4d67edf28b9f"
     },
     {
+      "file": "2026/notebook/lecture5.ipynb",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/2026/notebook/lecture5.ipynb",
+      "bytes": 13014,
+      "sha256": "df712171debd616b841ca1377c18a5dddf23a910e9d9142f396ef6013447578f",
+      "git_blob_sha": "e9a39901370eb226a0a82a79b395636436dc77e5"
+    },
+    {
       "file": "images/2026/l1/bert.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/bert.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/bert.png",
       "bytes": 647075,
       "sha256": "70e65b98696c017dc82013961f2a8d2c8161744626d1cddff22da41712999c73",
       "git_blob_sha": "a31840df0ca8c254164dd9ba48466b337df6a848"
     },
     {
       "file": "images/2026/l1/chatgpt.jpg",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/chatgpt.jpg",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/chatgpt.jpg",
       "bytes": 21718,
       "sha256": "f440b58751bcf0a3f3993fb033643131aca4eec692316fffe8bbfdec07032f9e",
       "git_blob_sha": "cb227b52c275e16d8942f41585ae83ce904d2635"
     },
     {
       "file": "images/2026/l1/distribution.jpg",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/distribution.jpg",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/distribution.jpg",
       "bytes": 377151,
       "sha256": "73e3e6192335dbc5a8c5b7959ddfa2e5a888ad8e5b6dcff9d06623511beb9a69",
       "git_blob_sha": "7cd45d529401e08a651ac8427f1af3b2cf56d1ed"
     },
     {
       "file": "images/2026/l1/gpt.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/gpt.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/gpt.png",
       "bytes": 830495,
       "sha256": "4f3e2d5bdb0d70437fd9e0df2799bd866ca74bb7394f3af74f95d548b21132c1",
       "git_blob_sha": "fa601e5e60302ca56fcb335fdc3ba276364fb88b"
     },
     {
       "file": "images/2026/l1/llama_family.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/llama_family.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/llama_family.png",
       "bytes": 399915,
       "sha256": "e920695f8bd6a85b06095034f995b40351f58b844113e823292654a34af4229f",
       "git_blob_sha": "8499f5cf36d4c99e40afc753d49804e5685618fb"
     },
     {
       "file": "images/2026/l1/llm_tree.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/llm_tree.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/llm_tree.png",
       "bytes": 477897,
       "sha256": "537841f0cfd4e417d28bdef08f6a5cd858ddd60fcef333e8d432ed0fd90d6713",
       "git_blob_sha": "67b1d953f076f0435cde611ffb3978a021900745"
     },
     {
       "file": "images/2026/l1/qq.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/qq.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/qq.png",
       "bytes": 122704,
       "sha256": "c12dfb4c9f9bc463db24d014861a2164ac647551325adaea5444cecd494ddfdb",
       "git_blob_sha": "fb214b642ee9d651f7202cb45827382e77ed6807"
     },
     {
       "file": "images/2026/l1/syllabus.svg",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/syllabus.svg",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/syllabus.svg",
       "bytes": 23252,
       "sha256": "f73b863d8180a1027640f87a56f17b16375e9bcf550e23d16ae1544b2bb2111a",
       "git_blob_sha": "3f10919b3222c404e5d0b6b4e289a44a3764b19f"
     },
     {
       "file": "images/2026/l1/transformer.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l1/transformer.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l1/transformer.png",
       "bytes": 253450,
       "sha256": "a0bbe395d8cd417d2d96f33de708008b6661169ff84ddaf78451c78459f05f0c",
       "git_blob_sha": "fe50ccf9ef4f5c69b66772c595633945e7f1928e"
     },
     {
       "file": "images/2026/l2/matmul_elem.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l2/matmul_elem.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l2/matmul_elem.png",
       "bytes": 51849,
       "sha256": "fc58e9703718e4199e4672e0137e5bc7022a116f913d3c79a5540ce286091f89",
       "git_blob_sha": "c27cc7cf76ea2ec17e3c3d6bd4c1bad9a274e64e"
     },
     {
       "file": "images/2026/l2/one-layer.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l2/one-layer.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l2/one-layer.png",
       "bytes": 117460,
       "sha256": "0c6108eea63f29389840d6945003aff52c7bee57981259485ac68e2186702688",
       "git_blob_sha": "9de652c54602003736c3d5720c4d4835799148a8"
     },
     {
       "file": "images/2026/l2/semanticrepresentation.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l2/semanticrepresentation.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l2/semanticrepresentation.png",
       "bytes": 188529,
       "sha256": "88b32a0cd00c60392a93bb2535f0d969476959187f608385a53f4868b7ad3604",
       "git_blob_sha": "21797c6cca37fae27ee7beac14219d71c17da21b"
     },
     {
       "file": "images/2026/l3/comp-graph.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l3/comp-graph.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l3/comp-graph.png",
       "bytes": 14368,
       "sha256": "25a6b95942757f26407a04fb292723af1594271bc48a7258d431809265ae853b",
       "git_blob_sha": "cfa6163d58a85baea0c9d90ff583ec956be11ec1"
     },
     {
       "file": "images/2026/l3/forward_backward.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l3/forward_backward.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l3/forward_backward.png",
       "bytes": 179300,
       "sha256": "c77260b896f08226034523fc72f7c8daadf7dfc329dfb72a46c1af59ef266b31",
       "git_blob_sha": "ba5be0ed26889146f7a1a50a59beb1098f140ed7"
     },
     {
       "file": "images/2026/l3/grad.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l3/grad.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l3/grad.png",
       "bytes": 265563,
       "sha256": "4e5951902173fb6fb32e5b9825e1a1dbe1f96d62a0869534d57ca7804482dd88",
       "git_blob_sha": "0b8500f713d97b1070f8892451e26f5849023bb5"
     },
     {
       "file": "images/2026/l3/non-convex.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l3/non-convex.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l3/non-convex.png",
       "bytes": 1379322,
       "sha256": "3d1fa6706105453bd7b5943ddd24f34f614a798653cb47778143233e8c03511a",
       "git_blob_sha": "ebbc4939f6df8c65630681c12f992bcc5df973b7"
     },
     {
       "file": "images/2026/l4/deepseek_v41_flash_arch.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/deepseek_v41_flash_arch.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/deepseek_v41_flash_arch.png",
       "bytes": 145610,
       "sha256": "d42da6c7ea654bc6782011e63e028af152aa45f3a941e59eb4635cd79027ee1a",
       "git_blob_sha": "eb9b24e7fdad612bbddbebbda931da9147e72c48"
     },
     {
       "file": "images/2026/l4/embeding_example.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/embeding_example.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/embeding_example.png",
       "bytes": 258094,
       "sha256": "c22f3737d640a36e1bd3349e3dc54cc8ace58d9b272d6cb00c23b294a44a3fe0",
       "git_blob_sha": "482c2aed904d0e8f583ea374188d26a83b6dc63e"
     },
     {
       "file": "images/2026/l4/llama_arch.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/llama_arch.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/llama_arch.png",
       "bytes": 158723,
       "sha256": "8a41987b3c9f03b429e77c13e90c6d55d8b57057f77a9fbbe41b9f7d56573b53",
       "git_blob_sha": "d723c1142c03c830de16cf94d8a2ea3430ffd09e"
     },
     {
       "file": "images/2026/l4/llama_arch_rope.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/llama_arch_rope.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/llama_arch_rope.png",
       "bytes": 79721,
       "sha256": "e1bcdd7b812ce64462dcebfd6dd1bff16880b70436dd5f37fbec31de3be11e55",
       "git_blob_sha": "68bce348ee9a3a6d429ece79c640e983a53ec8c2"
     },
     {
       "file": "images/2026/l4/nju.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/nju.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/nju.png",
       "bytes": 7481221,
       "sha256": "5e035aa4011dee3b0f902d4f1b50e655ec94a3b0a8484e78b1d24587a4848327",
       "git_blob_sha": "170f7eb4dcdbbdaa33d59d86d0bc47e2707e8460"
     },
     {
       "file": "images/2026/l4/nju2.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/nju2.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/nju2.png",
       "bytes": 4597422,
       "sha256": "ed863b206414c87c3de586f8f5b99356270503cf9bc64acbb7ef8c5b39428986",
       "git_blob_sha": "58ce01f4f3b6aa3e0e4530a0441ed706514e3472"
     },
     {
       "file": "images/2026/l4/nju_embed.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/nju_embed.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/nju_embed.png",
       "bytes": 1791954,
       "sha256": "ec30a67f28966021428cae1b7a8d929fcf1fa07b3d81de9889c12e758ca00577",
       "git_blob_sha": "6cabc6dff7379aae66432b0ca8407974580edc0f"
     },
     {
       "file": "images/2026/l4/periodicity.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/periodicity.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/periodicity.png",
       "bytes": 146510,
       "sha256": "7c774f4cf678f864a8eaa3ec81fba84efe49d3cc5adced273e1dcd3c296ee391",
       "git_blob_sha": "9f9e50a60097b67bb95a5d0fbdd33c0df09a9338"
     },
     {
       "file": "images/2026/l4/roformer_eq.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/roformer_eq.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/roformer_eq.png",
       "bytes": 69367,
       "sha256": "101889c0648bf6543c41f680645e85814be5fb6d8185304df26567b4cb66532c",
       "git_blob_sha": "0c0590f622e887566ea1105067bab6102c7a4851"
     },
     {
       "file": "images/2026/l4/roformer_fqk.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/roformer_fqk.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/roformer_fqk.png",
       "bytes": 52820,
       "sha256": "db0223860562db839094c4ae56e02f0b7f70830b97db11d79dad6c96f66e6d11",
       "git_blob_sha": "c1040daefbaaa0492884b5897ea34cc0795b0d7f"
     },
     {
       "file": "images/2026/l4/roformer_nd.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/roformer_nd.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/roformer_nd.png",
       "bytes": 85559,
       "sha256": "6cac59425d14a555d520028f9972e274d09f442643b78cc9f0dc852c4b1b67a3",
       "git_blob_sha": "367f288bdc1c8c34a6723fdc587594ab3810041e"
     },
     {
       "file": "images/2026/l4/rope_eq.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/rope_eq.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/rope_eq.png",
       "bytes": 15462,
       "sha256": "620470b8bd914d6e62a2e4fb8c91cbb94663ac0323523bd32938354c22c96d3c",
       "git_blob_sha": "7e578aace3d99b260f5d26563c4bf98dac724185"
     },
     {
       "file": "images/2026/l4/rope_example.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/rope_example.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/rope_example.png",
       "bytes": 171613,
       "sha256": "ca2b1fbe09b59b2ebfd8cb94872a68e0b9b0e76ba9122717849bbd486ec92a9e",
       "git_blob_sha": "7f8ad84b36e0255ea1597154d19206e24a789492"
     },
     {
       "file": "images/2026/l4/sinusodialPE.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/sinusodialPE.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/sinusodialPE.png",
       "bytes": 390331,
       "sha256": "8e173f5680210c5626229134f2bdfd649932f9524e92caed554f65927ba163f3",
       "git_blob_sha": "5f05fc7348155321154b65b5d5e8108f84a5aba1"
     },
     {
       "file": "images/2026/l4/sinusoidal.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/sinusoidal.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/sinusoidal.png",
       "bytes": 43487,
       "sha256": "3430f2cf2c83f838d1d0d847dc3147154f3652b68835ac7390ef2f004eb04ae3",
       "git_blob_sha": "5e9e61582f78a77fe4faa5135db2d6c4cf97e951"
     },
     {
       "file": "images/2026/l4/transformer.png",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/2026/l4/transformer.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l4/transformer.png",
       "bytes": 253450,
       "sha256": "a0bbe395d8cd417d2d96f33de708008b6661169ff84ddaf78451c78459f05f0c",
       "git_blob_sha": "fe50ccf9ef4f5c69b66772c595633945e7f1928e"
     },
     {
+      "file": "images/2026/l5/SiLU.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/SiLU.png",
+      "bytes": 24117,
+      "sha256": "6b11b50a3a675ddd1b97dbf11feece874e67904b702a7598ec768b70b428dab2",
+      "git_blob_sha": "d896a2f193789fe0c3fcec2e5942f9d9468be384"
+    },
+    {
+      "file": "images/2026/l5/activations.jpeg",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/activations.jpeg",
+      "bytes": 93753,
+      "sha256": "7edb3c6aae88aa0ab58f76af73eb031fcaa7c77c471855a0a3effdd0a6e3c673",
+      "git_blob_sha": "1b4d1c38d120db0ff62e11af64271b3aa45a666b"
+    },
+    {
+      "file": "images/2026/l5/animation-normalizing-1.gif",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/animation-normalizing-1.gif",
+      "bytes": 178943,
+      "sha256": "e84a36227c2c2166e9800b9dd228c7def9c05240c9f6f1f369436fa7171d9a04",
+      "git_blob_sha": "5a38c618d159324b7e126973f091dd7da2983512"
+    },
+    {
+      "file": "images/2026/l5/ffn_pipeline.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/ffn_pipeline.png",
+      "bytes": 88455,
+      "sha256": "608cf17b1ba5e9d69a7ca92196bdd09e5285fbf52a6aedf05782fcef59e2b342",
+      "git_blob_sha": "10410c6ade02c42603a4b9dbaa6a77c6a280a819"
+    },
+    {
+      "file": "images/2026/l5/llm_normalization.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/llm_normalization.png",
+      "bytes": 220147,
+      "sha256": "96993d167424712b09f73044cab5781d9c84eeafc6269e7de8c02a6dca7e2f29",
+      "git_blob_sha": "cfcef51ce99d2c4592771da1870cfa44e6bf054b"
+    },
+    {
+      "file": "images/2026/l5/non-linear-functions.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/non-linear-functions.png",
+      "bytes": 219678,
+      "sha256": "ba5582fd0a77455742dd5e5531dcf8a73b8264ad22b60c6c4dcf52c9bd29ab98",
+      "git_blob_sha": "6d92948c3735eaa82bb19b51331470c306af4b9c"
+    },
+    {
+      "file": "images/2026/l5/normal_for_training.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/normal_for_training.png",
+      "bytes": 41584,
+      "sha256": "d0268c0128a0f9125c576aa183b27af1cfa3c361e2f72d442b266e9acb78457c",
+      "git_blob_sha": "3f91404b5450fae6f638a2540a1fcf0a625849f0"
+    },
+    {
+      "file": "images/2026/l5/normalization.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/normalization.png",
+      "bytes": 44431,
+      "sha256": "e6c66518660ddd9f7ad065cec0f2776616fb5d8112667dcfd1184ba787070c43",
+      "git_blob_sha": "dfb780fee3bfaac3a75719c43edf03140be7f59a"
+    },
+    {
+      "file": "images/2026/l5/rope_impl.png",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/2026/l5/rope_impl.png",
+      "bytes": 88550,
+      "sha256": "5ad4182833fb393ba7a3245bc60f72d53cf4453a3ffe389172f8b108794a4e2d",
+      "git_blob_sha": "aedf5a7dccefe162f2267dc2f281733357c0bdd4"
+    },
+    {
       "file": "images/course.webp",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/course.webp",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/course.webp",
       "bytes": 571938,
       "sha256": "bb2fddc8971bd9719882adcfa98c89497abfc4cbe25febb3146ec7bc5c49f861",
       "git_blob_sha": "3b6233620fd3261e6b343bc388711dbcc3b6ddf1"
     },
     {
       "file": "images/l1/generation.jpg",
-      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/db4a461a622110ba47bdaafd6c58c921b465e5a9/images/l1/generation.jpg",
+      "url": "https://github.com/NJUDeepEngine/llm-course-lecture/blob/171b867f595108e6861292bfff6e5c3428eeb304/images/l1/generation.jpg",
       "bytes": 68396,
       "sha256": "7641b509bc4fd980bcaedd7435426a4a92f9bbdfa5d42fe82b7e34481d4e03a5",
       "git_blob_sha": "f1102acb7114acc27f9bafbf68a6ab745b4ffa7f"
     },
     {
       "file": "LECTURES.md",
-      "sha256": "46776ca0565a94851f3fdc1107c06886e76a798c18bf1ec608ee969732609b9a",
-      "bytes": 746,
+      "sha256": "966d126faea0d6b639acbefdd147e3fde5f5d752bdb011dadb55579eafff127d",
+      "bytes": 852,
       "generated": true
     }
   ]

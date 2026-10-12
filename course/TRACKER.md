@@ -1,6 +1,6 @@
 # 学习进度
 
-[学习指南](STUDY_GUIDE.md) 决定阶段顺序，[前期单元](bootcamp/README.md) 给出具体任务；本页只记录实际进展。没有自己的成果链接，不勾完成。已有表中没有完成记录，因此下列状态仍为待确认。
+[学习指南](STUDY_GUIDE.md) 决定阶段顺序，[前期单元](../assignments/bootcamp/README.md) 给出具体任务；本页只记录实际进展。没有自己的成果链接，不勾完成。已有表中没有完成记录，因此下列状态仍为待确认。
 
 ## 当前任务卡
 
@@ -8,8 +8,8 @@
 |---|---|
 | 当前阶段 | 0：入门实践 |
 | 当前任务 | 建议 W1-03：读懂真实表；实际完成位置待确认 |
-| 任务说明 | [W1-03 的材料、练习与完成标准](bootcamp/week1/README.md#w1-03) |
-| 打开文件 | [Pandas 清洗 Notebook](bootcamp/week1/day3/03_Pandas_data_cleaning.ipynb) §1～2、§5 |
+| 任务说明 | [W1-03 的材料、练习与完成标准](../assignments/bootcamp/week1/README.md#w1-03) |
+| 打开文件 | [Pandas 清洗 Notebook](../assignments/bootcamp/week1/day3/03_Pandas_data_cleaning.ipynb) §1～2、§5 |
 | 本次完成标志 | 独立完成数据说明、G2/G3 条件筛选和按 school 分组表 |
 | 成果链接 | 待填写 |
 | 一个卡点 | 待填写 |

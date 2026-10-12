@@ -55,4 +55,4 @@ TP=40、FP=10、FN=20、TN=130：precision=0.8；recall=40/60≈0.667；accuracy
 
 答案要点：排序/阈值分类/概率；precision 依赖先验；训练目标/训练分布/决策规则；只能视为需更多数据的信号；风险决策需要可信概率时。
 
-配套：[A04](../assignments/A04_classification_evaluation.md) · [T1](../tests/T1_undergraduate_midterm.md)
+配套：[A04](../../assignments/core/A04/A04_classification_evaluation.md) · [T1](../tests/T1_undergraduate_midterm.md)

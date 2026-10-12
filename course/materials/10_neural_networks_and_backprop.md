@@ -56,4 +56,4 @@ forward 保存 backward 所需的中间量；backward 接收上游 gradient，�
 
 答案要点：仿射变换可合并；B×H 与 D×H；神经元对称；log(K)；实现、优化、标签或容量存在基本问题。
 
-配套：[A06](../assignments/A06_backprop_and_training.md)
+配套：[A06](../../assignments/core/A06/A06_backprop_and_training.md)

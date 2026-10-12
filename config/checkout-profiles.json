@@ -1,0 +1,251 @@
+{
+  "version": 1,
+  "base_files": [
+    "README.md",
+    ".gitignore",
+    "pytest.ini",
+    "config/checkout-profiles.json",
+    "config/archive-manifest.json",
+    "docs/SERVER_GUIDE.md",
+    "docs/GITHUB_STORAGE.md",
+    "scripts/server_checkout.py",
+    "scripts/library_archive.py",
+    "requirements/bootcamp.txt",
+    "requirements/nju-a0.txt",
+    "scripts/verify_week1.py",
+    "scripts/verify_bootcamp.py"
+  ],
+  "profiles": {
+    "all-exercises": {
+      "description": "全部作业及对应个人实现",
+      "paths": [
+        "assignments/bootcamp/week1",
+        "work/bootcamp/week1",
+        "assignments/bootcamp/week2",
+        "work/bootcamp/week2",
+        "assignments/bootcamp/week3",
+        "work/bootcamp/week3",
+        "assignments/core/A01",
+        "work/assignments/A01",
+        "assignments/core/A02",
+        "work/assignments/A02",
+        "assignments/core/A03",
+        "work/assignments/A03",
+        "assignments/core/A04",
+        "work/assignments/A04",
+        "assignments/core/A05",
+        "work/assignments/A05",
+        "assignments/core/A06",
+        "work/assignments/A06",
+        "assignments/core/A07",
+        "work/assignments/A07",
+        "assignments/core/A08",
+        "work/assignments/A08",
+        "assignments/nju-llm-2026/a0",
+        "work/nju-llm-2026/a0",
+        "assignments/nju-llm-2026/a1",
+        "work/nju-llm-2026/a1",
+        "assignments/nju-llm-2026/a2",
+        "work/nju-llm-2026/a2",
+        "assignments/nju-llm-2026/a3",
+        "work/nju-llm-2026/a3",
+        "assignments/nju-llm-2026/a4",
+        "work/nju-llm-2026/a4",
+        "assignments/nju-llm-2026/a5",
+        "work/nju-llm-2026/a5"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "bootcamp": {
+      "description": "训练营第 1～3 周作业",
+      "paths": [
+        "assignments/bootcamp/week1",
+        "work/bootcamp/week1",
+        "assignments/bootcamp/week2",
+        "work/bootcamp/week2",
+        "assignments/bootcamp/week3",
+        "work/bootcamp/week3"
+      ]
+    },
+    "week1": {
+      "description": "训练营第 1 周作业",
+      "paths": [
+        "assignments/bootcamp/week1",
+        "work/bootcamp/week1"
+      ]
+    },
+    "week2": {
+      "description": "训练营第 2 周作业",
+      "paths": [
+        "assignments/bootcamp/week2",
+        "work/bootcamp/week2"
+      ]
+    },
+    "week3": {
+      "description": "训练营第 3 周作业",
+      "paths": [
+        "assignments/bootcamp/week3",
+        "work/bootcamp/week3"
+      ]
+    },
+    "core": {
+      "description": "中文课程 A01～A08 作业",
+      "paths": [
+        "assignments/core/A01",
+        "work/assignments/A01",
+        "assignments/core/A02",
+        "work/assignments/A02",
+        "assignments/core/A03",
+        "work/assignments/A03",
+        "assignments/core/A04",
+        "work/assignments/A04",
+        "assignments/core/A05",
+        "work/assignments/A05",
+        "assignments/core/A06",
+        "work/assignments/A06",
+        "assignments/core/A07",
+        "work/assignments/A07",
+        "assignments/core/A08",
+        "work/assignments/A08"
+      ]
+    },
+    "core-a01": {
+      "description": "中文课程 A01 作业",
+      "paths": [
+        "assignments/core/A01",
+        "work/assignments/A01"
+      ]
+    },
+    "core-a02": {
+      "description": "中文课程 A02 作业",
+      "paths": [
+        "assignments/core/A02",
+        "work/assignments/A02"
+      ]
+    },
+    "core-a03": {
+      "description": "中文课程 A03 作业",
+      "paths": [
+        "assignments/core/A03",
+        "work/assignments/A03"
+      ]
+    },
+    "core-a04": {
+      "description": "中文课程 A04 作业",
+      "paths": [
+        "assignments/core/A04",
+        "work/assignments/A04"
+      ]
+    },
+    "core-a05": {
+      "description": "中文课程 A05 作业",
+      "paths": [
+        "assignments/core/A05",
+        "work/assignments/A05"
+      ]
+    },
+    "core-a06": {
+      "description": "中文课程 A06 作业",
+      "paths": [
+        "assignments/core/A06",
+        "work/assignments/A06"
+      ]
+    },
+    "core-a07": {
+      "description": "中文课程 A07 作业",
+      "paths": [
+        "assignments/core/A07",
+        "work/assignments/A07"
+      ]
+    },
+    "core-a08": {
+      "description": "中文课程 A08 作业",
+      "paths": [
+        "assignments/core/A08",
+        "work/assignments/A08"
+      ]
+    },
+    "nju": {
+      "description": "NJU LLM 2026 a0～a5 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a0",
+        "work/nju-llm-2026/a0",
+        "assignments/nju-llm-2026/a1",
+        "work/nju-llm-2026/a1",
+        "assignments/nju-llm-2026/a2",
+        "work/nju-llm-2026/a2",
+        "assignments/nju-llm-2026/a3",
+        "work/nju-llm-2026/a3",
+        "assignments/nju-llm-2026/a4",
+        "work/nju-llm-2026/a4",
+        "assignments/nju-llm-2026/a5",
+        "work/nju-llm-2026/a5"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "nju-a0": {
+      "description": "NJU LLM 2026 a0 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a0",
+        "work/nju-llm-2026/a0"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "nju-a1": {
+      "description": "NJU LLM 2026 a1 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a1",
+        "work/nju-llm-2026/a1"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "nju-a2": {
+      "description": "NJU LLM 2026 a2 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a2",
+        "work/nju-llm-2026/a2"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "nju-a3": {
+      "description": "NJU LLM 2026 a3 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a3",
+        "work/nju-llm-2026/a3"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "nju-a4": {
+      "description": "NJU LLM 2026 a4 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a4",
+        "work/nju-llm-2026/a4"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    },
+    "nju-a5": {
+      "description": "NJU LLM 2026 a5 作业",
+      "paths": [
+        "assignments/nju-llm-2026/a5",
+        "work/nju-llm-2026/a5"
+      ],
+      "files": [
+        "assignments/nju-llm-2026/SOURCES.json"
+      ]
+    }
+  }
+}

@@ -1,8 +1,9 @@
-# Other downloaded courses stay local; NJU course materials are versioned.
+# Large overseas originals live in GitHub Releases; indexes and NJU stay in Git.
 /library/*/*
 !/library/*/README.md
 !/library/nju-llm-2026/**
 
+.idea
 .venv/
 .venv-dl/
 .cache/
@@ -11,7 +12,32 @@
 __pycache__/
 *.py[cod]
 .DS_Store
-course/bootcamp/week*/outputs/
+assignments/bootcamp/week*/outputs/
+work/**/outputs/
+work/**/checkpoints/
+work/**/runs/
+work/**/logs/
+work/**/.venv/
+work/**/venv/
+work/**/wandb/
+work/**/*.safetensors
+work/**/*.pt
+work/**/*.pth
+work/**/*.ckpt
+work/**/data/downloads/
+assignments/nju-llm-2026/a5/model/**/*
+!assignments/nju-llm-2026/a5/model/**/
+!assignments/nju-llm-2026/a5/model/**/README.md
+assignments/nju-llm-2026/a5/data/**/*
+!assignments/nju-llm-2026/a5/data/**/
+!assignments/nju-llm-2026/a5/data/**/README.md
+work/nju-llm-2026/a5/model/**/*
+!work/nju-llm-2026/a5/model/**/
+!work/nju-llm-2026/a5/model/**/README.md
+work/nju-llm-2026/a5/data/**/*
+!work/nju-llm-2026/a5/data/**/
+!work/nju-llm-2026/a5/data/**/README.md
+.pytest_cache/
 .env
 .env.*
 !.env.example

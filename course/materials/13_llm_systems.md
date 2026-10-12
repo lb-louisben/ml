@@ -59,4 +59,4 @@ Agent 风险包括 prompt injection、越权工具调用、循环、不可预测
 
 答案要点：外部上下文与参数更新；定位失败并避免指标抵消；证据噪声/冲突/忽略/生成错误；路径可知且要求可靠可审计；存在共同偏差、自评和版本漂移。
 
-配套：[A08](../assignments/A08_rag_evaluation.md) · [T3](../tests/T3_dl_llm_oral.md) · [Capstone](../projects/CAPSTONE.md)
+配套：[A08](../../assignments/core/A08/A08_rag_evaluation.md) · [T3](../tests/T3_dl_llm_oral.md) · [Capstone](../projects/CAPSTONE.md)

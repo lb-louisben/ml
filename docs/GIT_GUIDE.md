@@ -24,14 +24,14 @@ git push -u origin main
 ```bash
 git status
 git diff --stat
-git add course/bootcamp/week1/day3/03_Pandas_data_cleaning.ipynb
+git add assignments/bootcamp/week1/day3/03_Pandas_data_cleaning.ipynb
 git diff --cached --stat
 git commit -m "study: complete day 3 pandas exercises"
 ```
 
 下一天替换对应路径。只暂存确认要保存的文件；虚拟环境、缓存、检查点、outputs、.env 已排除。
-NJU 课程原件已纳入 Git，具体目录与操作见课程总入口。
-其他学校课程目录中的原始资料、网页快照和解压副本仍忽略，仅保留课程 `README.md` 索引；资料库总索引、`manifest.json` 来源清单及下载脚本仍提交。新克隆时，这些其他课程资料需运行 `python3 scripts/download_courses.py` 和 `python3 scripts/build_library_catalog.py` 恢复。
+NJU 讲义在 `library/`，作业在 `assignments/nju-llm-2026/`，个人实现放 `work/`，三类内容均由 Git 保存。
+其他学校原始资料和网页快照存放在 GitHub Releases；Git 保存索引、来源和归档校验清单。完整恢复用 `python3 scripts/library_archive.py restore --all`，随后按需运行目录生成器；服务器只选作业，见 [服务器教程](SERVER_GUIDE.md) 和 [存储方案](GITHUB_STORAGE.md)。
 本机 Git 简写与推送配置不随仓库克隆，Python 同步命令可直接使用。
 Notebook 是 JSON，单元输出也可能造成大量差异。可以在编辑器 Clear All Outputs 后保存再提交，但先确认不需要保留输出。不要随便清除自己的学习记录。
 

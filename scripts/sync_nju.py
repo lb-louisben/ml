@@ -65,7 +65,7 @@ def publish(folder, files, metadata, manifest_name="manifest.json"):
             if actual != sha256(data) and actual != known.get(name):
                 conflicts.append(str(target.relative_to(ROOT)))
     if conflicts:
-        raise RuntimeError("本地文件已修改，同步未写入。请先把自己的版本移到 work/：\n" +
+        raise RuntimeError("本地文件已修改，同步未写入。请先备份并移走以下文件到 work/（不是 cd work），再从项目根目录重试：\n" +
                            "\n".join(conflicts))
     # Stage all files on the same filesystem, then atomically replace each file.
     cache = ROOT / ".cache/nju-sync"
@@ -153,13 +153,28 @@ def sync_lectures(fetch):
     files["LECTURES.md"] = ("\n".join(index) + "\n").encode()
     resources.append(dict(file="LECTURES.md", sha256=sha256(files["LECTURES.md"]),
                           bytes=len(files["LECTURES.md"]), generated=True))
-    publish(DEST, files, dict(retrieved_at=datetime.now(timezone.utc).isoformat(),
-                             repository=REPO, commit=commit, tree=tree["sha"], resources=resources))
+    # Add new upstream files only. Existing teaching files may contain personal work.
+    existing = {name for name in files if local_path(DEST, name).exists()}
+    additions = {name: data for name, data in files.items() if name not in existing}
+    # Refresh the generated navigation only while it still matches our last version.
+    previous = json.loads((DEST / "manifest.json").read_text()) if (DEST / "manifest.json").exists() else {}
+    known = {r["file"]: r["sha256"] for r in previous.get("resources", [])}
+    index = DEST / "LECTURES.md"
+    if index.exists() and sha256(index.read_bytes()) == known.get("LECTURES.md"):
+        additions["LECTURES.md"] = files["LECTURES.md"]
+    elif index.exists():
+        for record in resources:
+            if record["file"] == "LECTURES.md":
+                record.update(sha256=known.get("LECTURES.md", "user-managed"))
+    publish(DEST, additions, dict(retrieved_at=datetime.now(timezone.utc).isoformat(),
+                                  repository=REPO, commit=commit, tree=tree["sha"],
+                                  policy="add-only; preserve existing course files", resources=resources))
+    print(f"增量同步：保留 {len(existing - {'LECTURES.md'})} 个已有资料文件，仅补充新增文件。")
 
 
 def sync_assignments(fetch):
     """Compatibility command: assignments are a fixed, versioned snapshot."""
-    manifest = DEST / "assignments/repository-manifest.json"
+    manifest = ROOT / "assignments/nju-llm-2026/SOURCES.json"
     if not manifest.is_file():
         raise RuntimeError("作业固定快照缺失，请从自己的 ML 仓库恢复 assignments 目录。")
     print("作业已一次性归档：跳过联网与更新。见 library/nju-llm-2026/README.md#作业")
@@ -176,8 +191,10 @@ def main():
             sync_lectures(fetch)
         if args.source in ("assignments", "all"):
             sync_assignments(fetch)
-    except (ValueError, RuntimeError, OSError, subprocess.SubprocessError) as exc:
-        parser.exit(1, f"同步失败：{exc}\n若本机代理不可用，可添加 --direct 重试。\n")
+    except subprocess.SubprocessError as exc:
+        parser.exit(1, f"下载失败：{exc}\n若本机代理不可用，可添加 --direct 重试。\n")
+    except (ValueError, RuntimeError, OSError) as exc:
+        parser.exit(1, f"同步失败：{exc}\n")
 
 
 if __name__ == "__main__":

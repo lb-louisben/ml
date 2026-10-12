@@ -1,43 +1,48 @@
 # 项目目录与文件归属
 
-[返回项目首页](../README.md) · [技术文档](README.md)
+[项目首页](../README.md) · [GitHub 存储方案](GITHUB_STORAGE.md) · [服务器教程](SERVER_GUIDE.md)
 
 ## 放置规则
 
 | 内容 | 位置 |
 |---|---|
-| 项目总览、快速跳转、启动方法 | 根目录 `README.md` |
-| 学习顺序、进度、评分与来源说明 | `course/` |
-| 第一、二、三部分入门内容 | `course/bootcamp/week1/`、`week2/`、`week3/` |
-| 入门配套数据、参考项目 | 所属课程内部，如 `course/bootcamp/week1/data/` |
-| 中文教材、作业、测验、项目要求 | `course/materials/`、`assignments/`、`tests/`、`projects/` |
-| 学校原版材料 | `library/<课程与学期>/` |
-| 自己的独立实验与项目实现 | `work/<任务名>/` |
-| 环境和维护说明、历史记录 | `docs/`；环境指南和测试集中在 `docs/setup/` |
-| 下载、索引和验证脚本 | `scripts/` |
+| 作业总入口、入门练习、题目、原始模板 | `assignments/` |
+| Bootcamp Notebook、小数据、NumPy 网络 | `assignments/bootcamp/week1/`～`week3/` |
+| 中文补充作业题目 | `assignments/core/A01/`～`A08/` |
+| NJU 原始作业与来源清单 | `assignments/nju-llm-2026/a0/`～`a5/`、`SOURCES.json` |
+| 学习路线、进度、中文教材、测验、项目要求 | `course/` |
+| 学校讲义、参考书与课程来源 | `library/`；海外大资料保存在 GitHub Releases |
+| 中文作业的个人实现 | `work/assignments/<编号>/`，开始时创建 |
+| NJU 个人作业实现 | `work/nju-llm-2026/a0/`～`a5/` |
+| NJU 个人讲义与学习 Notebook | `work/nju-llm-2026/lecture*.md`、`lecture*.ipynb` |
+| 独立实验与正式报告 | `work/<任务名>/`；需要保存的结果用 `reports/` 或 `figures/` |
+| 临时个人试验 | `work/scratch/` |
+| 服务器检出与完整归档清单 | `config/` |
+| 任务最小依赖 | `requirements/`；根 requirements 是完整本机环境 |
+| 检出、归档、下载、同步和验证工具 | `scripts/` |
+| 工具回归测试 | `scripts/tests/`；`course/tests/` 是学习测验 |
+| 使用说明、环境和历史迁移 | `docs/`、`docs/setup/`、`docs/archive/` |
 
-根目录保留总入口和项目级依赖文件。课程内容归入 `course/`，同一系列的周目录保持同级。
+`assignments/` 的 NJU 模板保留老师的 TODO；个人 A0 实现已从原件目录转存到 `work/`，不丢原有代码。`SOURCES.json` 保留原始分支路径、SHA256，并通过 `local_roots` 记录现在的放置位置。
 
-## 当前运行约定
+## 运行与生成约定
 
-从项目根目录启动 `.venv` 和 JupyterLab。Week 1 Notebook 会向上查找包含 `course/bootcamp/week1/data/` 的项目根目录，因此也能从各自日目录运行。输出位于该课程的 `outputs/`，由 Git 忽略。
+从项目根目录启动 `.venv` 和 JupyterLab。Bootcamp Notebook 向上定位 `assignments/bootcamp/`；Week 1 使用随练习保存的成绩数据，Week 2/3 使用自带数据，Week 3 共用同目录 `numpy_mlp.py`。从周目录或日目录也能运行。
 
-Week 2/3 的带练教程位于各周目录，材料解释和示例代码整合在 Notebook 中；Week 3 共用 `numpy_mlp.py`。演示产物和执行副本保存到各周 `outputs/`，自己的独立练习放在 `work/`。PyTorch 使用 `.venv`，配置见 [深度学习环境](setup/DEEP_LEARNING.md)。
+自动验证副本位于 `assignments/bootcamp/week*/outputs/verified/`；缓存、运行产物、环境和模型权重由 Git 忽略。完整存储范围、海外资料恢复和指定 ZIP 下载见存储方案，服务器用 `server_checkout.py` 选择作业。
 
-`library/manifest.json` 记录原始 URL、来源页面、下载状态、大小、SHA256 和获取日期。ZIP 原件与已解压的 `unpacked/` 按课程保存；要修改作业时复制到 `work/`，依赖与额外数据按包内 README 准备。
+| 生成文件 | 维护工具 |
+|---|---|
+| `library/README.md`、海外课程 README、`course/READING_LIST.md` | `download_courses.py`、`build_library_catalog.py` |
+| `library/nju-llm-2026/LECTURES.md`、讲义来源清单 | `sync_nju.py`，保持已有内容，仅补充新文件 |
+| `config/archive-manifest.json` 与 Release 附件 | `library_archive.py pack/publish` |
 
-`library/nju-llm-2026/` 单独保存 NJU 2026 讲义和作业题面，整个课程目录纳入 Git 版本控制，来源清单保存在该目录内。同步命令与推送步骤见 [NJU 课程总入口](../library/nju-llm-2026/README.md)；项目首页顶部可直达唯一的 NJU 课程总入口。
+索引入口修改需要同步修改生成器，避免重建丢失。NJU 与海外资料分开维护来源清单；NJU 不计入外课的 415 份原件统计。
 
-下载资料运行 `python3 scripts/download_courses.py`，随后运行 `python3 scripts/build_library_catalog.py` 重建索引。下载器会复用已有下载并重试失败项，不会安装或执行课程代码。
+修改或移动文件后，执行 `python3 scripts/check_structure.py`；完整恢复资料后加 `--strict-library`。该工具验证自有文档链接、图片引用、Notebook JSON 和工具语法，不执行 Notebook或改写老师原件。工具测试与 Notebook 验证命令见 [工具说明](../scripts/README.md)。
 
 ## 迁移记录
 
-2026-09-21：
+2026-09-21：将原课程、三周入门内容与环境说明整理到 `course/`、`docs/`；历史脚本为 [reorganize_learning_2026_09_21.py](archive/reorganize_learning_2026_09_21.py)。它记录当时目录，不用于当前迁移。
 
-- 将原 `curriculum/` 归入 `course/`，原 `week2/`、`week3/` 归入 `course/bootcamp/`。
-- 将原根目录 `week1/` 整体移入 `course/bootcamp/week1/`，包括现有笔记、数据与输出；更新 Notebook 数据路径、验证脚本、Git 忽略规则和文档链接。
-- 将环境说明与原根目录 `00_环境测试.ipynb` 集中到 `docs/setup/`，Git 和技术说明集中到 `docs/`。
-- 根目录 `README.md` 作为项目使用指南和快速导航；个人独立实验统一使用 `work/`。
-- 原 53 周规划保存在 [历史记录](archive/learning-plan-53-weeks.md)。当前学习安排见 [学习指南](../course/STUDY_GUIDE.md)。
-
-迁移脚本为 `scripts/reorganize_learning.py`；当前目录下重复执行会直接退出，不重复搬移。
+2026-10-12：先统一 A01～A08 编号目录，整理个人草稿与工具测试，修复个人第二讲图片路径。随后按服务器隔离需求，将 Bootcamp 与中文作业移到 `assignments/bootcamp/`、`assignments/core/`，NJU A0～A5 移到 `assignments/nju-llm-2026/`；更新全部自有文档和 Notebook 路径。海外原件按课程与 ZIP 分别存入 Releases，提供检出配置、归档校验和完整使用教程。

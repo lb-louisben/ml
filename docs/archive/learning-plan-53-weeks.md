@@ -30,9 +30,9 @@
 
 目标是形成最小闭环，而不是假装三周学完 ML。
 
-- 第 1 周：[Python、数据分析与线性回归](../../course/bootcamp/week1/README.md)。沿用现有学生成绩 Notebook。
-- 第 2 周：[分类、树模型与可靠评估](../../course/bootcamp/week2/README.md)。主作业为 [A04 分类与阈值](../../course/assignments/A04_classification_evaluation.md)。
-- 第 3 周：[神经网络、现代 AI 与综合项目](../../course/bootcamp/week3/README.md)。结束时做 [数学诊断 T0](../../course/tests/T0_math_diagnostic.md)。
+- 第 1 周：[Python、数据分析与线性回归](../../assignments/bootcamp/week1/README.md)。沿用现有学生成绩 Notebook。
+- 第 2 周：[分类、树模型与可靠评估](../../assignments/bootcamp/week2/README.md)。主作业为 [A04 分类与阈值](../../assignments/core/A04/A04_classification_evaluation.md)。
+- 第 3 周：[神经网络、现代 AI 与综合项目](../../assignments/bootcamp/week3/README.md)。结束时做 [数学诊断 T0](../../course/tests/T0_math_diagnostic.md)。
 - 阶段出口：能从原始表格到 Pipeline、验证集选择、一次性测试集评价，并写出模型的局限。
 
 <a id="phase-1"></a>
@@ -44,10 +44,10 @@
 | 周 | 主题 | 学习材料 | 输出 |
 |---|---|---|---|
 | 4 | 向量、矩阵、线性方程组、秩 | [01 线性代数](../../course/materials/01_linear_algebra.md) §1～2 | MIT 对应 Problems + NumPy 验证 |
-| 5 | 正交、投影、最小二乘 | [01 线性代数](../../course/materials/01_linear_algebra.md) §3 | [A01 Part A](../../course/assignments/A01_math_and_optimization.md) |
+| 5 | 正交、投影、最小二乘 | [01 线性代数](../../course/materials/01_linear_algebra.md) §3 | [A01 Part A](../../assignments/core/A01/A01_math_and_optimization.md) |
 | 6 | 特征值、正定矩阵、SVD、PCA | [01 线性代数](../../course/materials/01_linear_algebra.md) §4～5 | 手算 2×2 SVD + 图像压缩实验 |
 | 7 | 条件概率、Bayes、期望、方差、常见分布 | [02 概率与统计](../../course/materials/02_probability_statistics.md) | CS229 概率复习 + A01 Part B |
-| 8 | 多元微积分、矩阵求导、梯度下降 | [03 微积分与优化](../../course/materials/03_calculus_optimization.md) | [A01 Part C](../../course/assignments/A01_math_and_optimization.md) |
+| 8 | 多元微积分、矩阵求导、梯度下降 | [03 微积分与优化](../../course/materials/03_calculus_optimization.md) | [A01 Part C](../../assignments/core/A01/A01_math_and_optimization.md) |
 | 9 | 综合复习 | 错题本与重做 | 闭卷 [T0](../../course/tests/T0_math_diagnostic.md) |
 
 若 T0 低于 70%，只补对应模块；不要把整个阶段重学一遍。
@@ -60,12 +60,12 @@
 
 | 周 | 主题 | 主材料 | 作业/项目 |
 |---|---|---|---|
-| 10 | 数据生命周期、Pandas、可复现 EDA | [04 数据与实验设计](../../course/materials/04_data_and_experiment_design.md) | [A02](../../course/assignments/A02_data_audit.md) |
+| 10 | 数据生命周期、Pandas、可复现 EDA | [04 数据与实验设计](../../course/materials/04_data_and_experiment_design.md) | [A02](../../assignments/core/A02/A02_data_audit.md) |
 | 11 | 清洗、缺失、正则、可视化 | [04 数据与实验设计](../../course/materials/04_data_and_experiment_design.md) | A02 提交 |
 | 12 | 抽样、估计、偏差与方差 | [02 概率与统计](../../course/materials/02_probability_statistics.md) | 统计模拟 Notebook |
-| 13 | 线性回归与几何解释 | [05 线性模型](../../course/materials/05_linear_models.md) | [A03](../../course/assignments/A03_regression_from_scratch.md) |
+| 13 | 线性回归与几何解释 | [05 线性模型](../../course/materials/05_linear_models.md) | [A03](../../assignments/core/A03/A03_regression_from_scratch.md) |
 | 14 | 特征工程、正则化、交叉验证 | [05 线性模型](../../course/materials/05_linear_models.md) | A03 提交 |
-| 15 | 逻辑回归、生成式分类 | [05 线性模型](../../course/materials/05_linear_models.md) · [08 概率模型](../../course/materials/08_probabilistic_and_kernel_ml.md) | [A04](../../course/assignments/A04_classification_evaluation.md) |
+| 15 | 逻辑回归、生成式分类 | [05 线性模型](../../course/materials/05_linear_models.md) · [08 概率模型](../../course/materials/08_probabilistic_and_kernel_ml.md) | [A04](../../assignments/core/A04/A04_classification_evaluation.md) |
 | 16 | kNN、决策树、随机森林、boosting | [07 树与集成](../../course/materials/07_trees_and_ensembles.md) | A04 提交 |
 | 17 | 指标、阈值、校准、类别不平衡 | [06 分类与评价](../../course/materials/06_classification_and_metrics.md) | 错误切片报告 |
 | 18 | SVM 与核方法 | [08 概率模型与核](../../course/materials/08_probabilistic_and_kernel_ml.md) | 核技巧推导练习 |
@@ -84,7 +84,7 @@
 | 周 | 主题 | 必须会做 | 对应考核 |
 |---|---|---|---|
 | 22 | MLE、MAP、指数族、GLM | [02 概率](../../course/materials/02_probability_statistics.md) · [05 线性模型](../../course/materials/05_linear_models.md) | 推导题 |
-| 23 | GDA、Naive Bayes | [08 概率模型与核](../../course/materials/08_probabilistic_and_kernel_ml.md) | [A05 Part A](../../course/assignments/A05_probabilistic_and_kernel_ml.md) |
+| 23 | GDA、Naive Bayes | [08 概率模型与核](../../course/materials/08_probabilistic_and_kernel_ml.md) | [A05 Part A](../../assignments/core/A05/A05_probabilistic_and_kernel_ml.md) |
 | 24 | margin、SVM、kernel | [08 概率模型与核](../../course/materials/08_probabilistic_and_kernel_ml.md) | A05 Part B |
 | 25 | bias–variance、正则化、学习曲线 | [05 线性模型](../../course/materials/05_linear_models.md) · [09 泛化](../../course/materials/09_unsupervised_and_generalization.md) | 实验备忘录 |
 | 26 | 决策树、boosting | [07 树与集成](../../course/materials/07_trees_and_ensembles.md) | 模型比较 |
@@ -106,7 +106,7 @@
 
 | 周 | 主题 | 实践 |
 |---|---|---|
-| 34 | 计算图、反向传播、梯度检查 | [10 神经网络](../../course/materials/10_neural_networks_and_backprop.md) · [A06](../../course/assignments/A06_backprop_and_training.md) |
+| 34 | 计算图、反向传播、梯度检查 | [10 神经网络](../../course/materials/10_neural_networks_and_backprop.md) · [A06](../../assignments/core/A06/A06_backprop_and_training.md) |
 | 35 | 优化器、初始化、归一化 | [10 神经网络](../../course/materials/10_neural_networks_and_backprop.md) · [11 训练模式](../../course/materials/11_deep_learning_patterns.md) |
 | 36 | MLP 与训练诊断 | [10 神经网络](../../course/materials/10_neural_networks_and_backprop.md)；完成 A06 |
 | 37 | CNN、感受野、卷积输出尺寸 | [11 深度学习训练模式](../../course/materials/11_deep_learning_patterns.md) |
@@ -129,9 +129,9 @@ CS231n 官方 2025 三个 assignment 从 kNN/Softmax/全连接网络，推进到
 |---|---|---|
 | 44 | tokenization、word2vec、embedding | [12 Embedding 与 Transformer](../../course/materials/12_embeddings_and_transformers.md) |
 | 45 | RNN、seq2seq、attention | [11 训练模式](../../course/materials/11_deep_learning_patterns.md) · [12 Transformer](../../course/materials/12_embeddings_and_transformers.md) |
-| 46 | Transformer 从公式到实现 | [12 Transformer](../../course/materials/12_embeddings_and_transformers.md) · [A07](../../course/assignments/A07_transformer_from_scratch.md) |
+| 46 | Transformer 从公式到实现 | [12 Transformer](../../course/materials/12_embeddings_and_transformers.md) · [A07](../../assignments/core/A07/A07_transformer_from_scratch.md) |
 | 47 | pretraining、SFT、PEFT、DPO 概念 | [13 LLM 系统](../../course/materials/13_llm_systems.md) |
-| 48 | RAG、agent、评估与安全 | [13 LLM 系统](../../course/materials/13_llm_systems.md) · [A08](../../course/assignments/A08_rag_evaluation.md) |
+| 48 | RAG、agent、评估与安全 | [13 LLM 系统](../../course/materials/13_llm_systems.md) · [A08](../../assignments/core/A08/A08_rag_evaluation.md) |
 | 49 | 综合口试与方向选择 | [T3](../../course/tests/T3_dl_llm_oral.md) |
 
 出口标准：能解释 embedding、self-attention、预训练/后训练的差别；能把 RAG 拆成检索、生成和评估，并用证据说明系统是否真的改进。
@@ -163,4 +163,4 @@ CS231n 官方 2025 三个 assignment 从 kNN/Softmax/全连接网络，推进到
 
 ## 下一步
 
-当前最合理的入口仍是 [week1](../../course/bootcamp/week1/README.md)。第一周项目通过后进入 [week2](../../course/bootcamp/week2/README.md)，不要同时开十门课。
+当前最合理的入口仍是 [week1](../../assignments/bootcamp/week1/README.md)。第一周项目通过后进入 [week2](../../assignments/bootcamp/week2/README.md)，不要同时开十门课。

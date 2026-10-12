@@ -6,15 +6,15 @@
 
 ## 当前怎样接续
 
-先完成学生成绩回归项目。前期已拆成 [27 次学习](bootcamp/README.md)，每次 90～120 分钟；这是内容单元，可以跨天完成。
+先完成学生成绩回归项目。前期已拆成 [27 次学习](../assignments/bootcamp/README.md)，每次 90～120 分钟；这是内容单元，可以跨天完成。
 
-原指南从 Day 3 接续，但进度表尚无完成证据。先用 [W1-01/02](bootcamp/week1/README.md#w1-01) 的独立练习确认 Python / NumPy 基础，再按下面三步推进：
+原指南从 Day 3 接续，但进度表尚无完成证据。先用 [W1-01/02](../assignments/bootcamp/week1/README.md#w1-01) 的独立练习确认 Python / NumPy 基础，再按下面三步推进：
 
 | 顺序 | 具体安排 | 本次成果 |
 |---|---|---|
-| 建议接续点 | [W1-03：读懂真实表](bootcamp/week1/README.md#w1-03) | 数据说明、条件筛选、按学校分组统计 |
-| 下一次 | [W1-04：有依据地清洗](bootcamp/week1/README.md#w1-04) | 教学副本清洗规则、质量报告、导出检查 |
-| 再下一次 | [W1-05：用图回答问题](bootcamp/week1/README.md#w1-05) | 四张训练集图表及证据、局限 |
+| 建议接续点 | [W1-03：读懂真实表](../assignments/bootcamp/week1/README.md#w1-03) | 数据说明、条件筛选、按学校分组统计 |
+| 下一次 | [W1-04：有依据地清洗](../assignments/bootcamp/week1/README.md#w1-04) | 教学副本清洗规则、质量报告、导出检查 |
+| 再下一次 | [W1-05：用图回答问题](../assignments/bootcamp/week1/README.md#w1-05) | 四张训练集图表及证据、局限 |
 
 已有成果满足某个单元的完成标准时，记录证据后跳过。随后继续 W1-06～10，完成回归项目再进入 W2-01。每天只需打开 [进度表](TRACKER.md) 和当前周的任务说明。
 
@@ -36,9 +36,9 @@
 
 ## 阶段 0：先做出三个小实验
 
-严格顺序：[回归](bootcamp/week1/README.md) → [分类](bootcamp/week2/README.md) → [小网络](bootcamp/week3/README.md)。每次只保留一个正在做的项目。
+严格顺序：[回归](../assignments/bootcamp/week1/README.md) → [分类](../assignments/bootcamp/week2/README.md) → [小网络](../assignments/bootcamp/week3/README.md)。每次只保留一个正在做的项目。
 
-第一次实现分类与网络，使用 [三本带练教程](bootcamp/README.md)：必要解释、材料链接、中文注释示例和独立变式已按单元整合。先跟做，再自己重建；不要求面对任务清单直接从空白实现。
+第一次实现分类与网络，使用 [三本带练教程](../assignments/bootcamp/README.md)：必要解释、材料链接、中文注释示例和独立变式已按单元整合。先跟做，再自己重建；不要求面对任务清单直接从空白实现。
 
 - 回归：按上方当前任务表完成，验收用第一阶段已有评分表。
 - 分类：Dummy + 逻辑回归 + 决策树，完成合法划分、验证集选阈值、最终评价与错误分析；具体任务见分类页面。
@@ -54,7 +54,7 @@
 
 学习顺序：矩阵与子空间 → 投影与最小二乘 → 特征值/SVD → 条件概率与期望 → 梯度与链式法则。对应 [中文导读 01～03](materials/README.md)，原件见 [数学文件索引](READING_LIST.md#math)。
 
-每个主题做配套练习并用 NumPy 验证；[A01](assignments/A01_math_and_optimization.md) 可替换同主题练习。入口做 T0 找弱项，出口重测 [T0](tests/T0_math_diagnostic.md) ≥70；保留最小二乘推导、Bayes 计算与梯度检查。已通过的主题不用整章重做。
+每个主题做配套练习并用 NumPy 验证；[A01](../assignments/core/A01/A01_math_and_optimization.md) 可替换同主题练习。入口做 T0 找弱项，出口重测 [T0](tests/T0_math_diagnostic.md) ≥70；保留最小二乘推导、Bayes 计算与梯度检查。已通过的主题不用整章重做。
 
 <a id="phase-2"></a>
 
@@ -62,7 +62,7 @@
 
 主材料：[Data 100](../library/berkeley-data100-sp25/README.md)。顺序为数据粒度与清洗 → EDA → 特征工程 → 回归/分类 → 交叉验证与错误分析。
 
-只选上述主题对应的原课练习；已掌握的 Pandas 操作用独立练习确认后跳过。[A02～A04](assignments/README.md) 是对应主题的替代练习，不额外叠加。
+只选上述主题对应的原课练习；已掌握的 Pandas 操作用独立练习确认后跳过。[A02～A04](../assignments/core/README.md) 是对应主题的替代练习，不额外叠加。
 
 阶段成果是 [P1](projects/P1_tabular_benchmark.md) 与 [T1](tests/T1_undergraduate_midterm.md) ≥70。P1 使用新的数据或问题验证迁移能力；可以复用入门项目的代码结构，需补齐 P1 的完整要求。
 
@@ -72,7 +72,7 @@
 
 主材料：[CS229 SEE](../library/stanford-cs229-see/README.md)。这是旧版公开档案，按其中 Schedule 和讲义标题推进：监督学习 → 概率模型与核方法 → 泛化与模型选择 → 无监督学习 → 课程其余主题。
 
-每学完一组讲义，做原 Problem Sets 中对应题，记录推导、实现与订正；MATLAB/Octave 题可以用 Python 完成并注明移植。[A03/A05](assignments/README.md) 可替换同主题实现练习。
+每学完一组讲义，做原 Problem Sets 中对应题，记录推导、实现与订正；MATLAB/Octave 题可以用 Python 完成并注明移植。[A03/A05](../assignments/core/README.md) 可替换同主题实现练习。
 
 [CS189](../library/berkeley-cs189-sp25/README.md) 仅用于卡点补充或考题自测，不单列为第二门必修。阶段验收为原课对应题的独立尝试与订正、[T2](tests/T2_graduate_ml_final.md) ≥70。
 
@@ -82,7 +82,7 @@
 
 主材料：[CS182](../library/berkeley-cs182-sp21/README.md)。顺序为反传 → 优化与初始化 → 正则化与训练诊断 → CNN → 序列与 Attention。生成模型按项目需要选学。
 
-完成相关原课网络练习，或用 [A06](assignments/A06_backprop_and_training.md) 替代同主题部分；在入门已有代码上补齐梯度对照、多随机种子和故障诊断。[CS231n](../library/stanford-cs231n-2025/README.md) 用于视觉专题或缺失练习的补充，不要求整套叠加。其 2025 页面归档的作业 ZIP 存在跨年份情况，以包内说明为准。
+完成相关原课网络练习，或用 [A06](../assignments/core/A06/A06_backprop_and_training.md) 替代同主题部分；在入门已有代码上补齐梯度对照、多随机种子和故障诊断。[CS231n](../library/stanford-cs231n-2025/README.md) 用于视觉专题或缺失练习的补充，不要求整套叠加。其 2025 页面归档的作业 ZIP 存在跨年份情况，以包内说明为准。
 
 阶段成果为 [P2](projects/P2_deep_learning_reproduction.md)：先选范围可控的论文与 baseline，再做至少两项消融、错误分析和复现报告。进入本阶段后才写 P2 proposal。
 
@@ -92,9 +92,9 @@
 
 主材料：[CS224N Winter 2025](../library/stanford-cs224n-w25/README.md)。按词向量 → 神经网络 → RNN/Attention → Transformer → 预训练与适配 → 评价的顺序学习。
 
-原课 A1～A4 随对应主题推进；[A07](assignments/A07_transformer_from_scratch.md) 可替换其中 self-attention 实现练习，但不能算作整份学校作业完成。先运行小样本和包内检查，再决定完整训练规模。
+原课 A1～A4 随对应主题推进；[A07](../assignments/core/A07/A07_transformer_from_scratch.md) 可替换其中 self-attention 实现练习，但不能算作整份学校作业完成。先运行小样本和包内检查，再决定完整训练规模。
 
-选做 RAG 应用时再完成 [A08](assignments/A08_rag_evaluation.md)；Agent 作为应用扩展，不单独设入门门槛。阶段验收为所学核心练习与 [T3](tests/T3_dl_llm_oral.md) ≥70。
+选做 RAG 应用时再完成 [A08](../assignments/core/A08/A08_rag_evaluation.md)；Agent 作为应用扩展，不单独设入门门槛。阶段验收为所学核心练习与 [T3](tests/T3_dl_llm_oral.md) ≥70。
 
 <a id="phase-6"></a>
 
