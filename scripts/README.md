@@ -4,6 +4,7 @@
 
 | 用途 | 命令 |
 |---|---|
+| 配置本机 PyCharm 根目录、源码模块与排除目录 | `python3 scripts/configure_pycharm.py` |
 | 查看服务器练习配置 | `python3 scripts/server_checkout.py list` |
 | 选择练习，仅在服务器最小检出目录使用 | `python3 scripts/server_checkout.py set week1` |
 | 检查文档链接、Notebook JSON 与工具语法 | `python3 scripts/check_structure.py` |

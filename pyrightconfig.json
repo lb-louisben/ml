@@ -1,0 +1,114 @@
+{
+  "include": [
+    "scripts",
+    "assignments",
+    "work"
+  ],
+  "exclude": [
+    "**/__pycache__",
+    "**/.ipynb_checkpoints",
+    "**/.pytest_cache",
+    "**/.mypy_cache",
+    "**/.ruff_cache",
+    "**/.venv",
+    "**/venv",
+    "**/.cache",
+    "**/.jupyter",
+    "**/node_modules",
+    "**/outputs",
+    "**/checkpoints",
+    "**/runs",
+    "**/logs",
+    "**/wandb",
+    "**/downloads",
+    "**/*.safetensors",
+    "**/*.pt",
+    "**/*.pth",
+    "**/*.ckpt",
+    "assignments/nju-llm-2026/source",
+    "**/model",
+    "**/datasets"
+  ],
+  "typeCheckingMode": "basic",
+  "executionEnvironments": [
+    {
+      "root": "assignments/nju-llm-2026/a0",
+      "extraPaths": [
+        "assignments/nju-llm-2026/a0"
+      ]
+    },
+    {
+      "root": "assignments/nju-llm-2026/a1",
+      "extraPaths": [
+        "assignments/nju-llm-2026/a1"
+      ]
+    },
+    {
+      "root": "assignments/nju-llm-2026/a2",
+      "extraPaths": [
+        "assignments/nju-llm-2026/a2"
+      ]
+    },
+    {
+      "root": "assignments/nju-llm-2026/a3",
+      "extraPaths": [
+        "assignments/nju-llm-2026/a3"
+      ]
+    },
+    {
+      "root": "assignments/nju-llm-2026/a4",
+      "extraPaths": [
+        "assignments/nju-llm-2026/a4"
+      ]
+    },
+    {
+      "root": "assignments/nju-llm-2026/a5",
+      "extraPaths": [
+        "assignments/nju-llm-2026/a5"
+      ]
+    },
+    {
+      "root": "work/nju-llm-2026/a0",
+      "extraPaths": [
+        "work/nju-llm-2026/a0"
+      ]
+    },
+    {
+      "root": "work/nju-llm-2026/a1",
+      "extraPaths": [
+        "work/nju-llm-2026/a1"
+      ]
+    },
+    {
+      "root": "work/nju-llm-2026/a2",
+      "extraPaths": [
+        "work/nju-llm-2026/a2"
+      ]
+    },
+    {
+      "root": "work/nju-llm-2026/a3",
+      "extraPaths": [
+        "work/nju-llm-2026/a3"
+      ]
+    },
+    {
+      "root": "work/nju-llm-2026/a4",
+      "extraPaths": [
+        "work/nju-llm-2026/a4"
+      ]
+    },
+    {
+      "root": "work/nju-llm-2026/a5",
+      "extraPaths": [
+        "work/nju-llm-2026/a5"
+      ]
+    },
+    {
+      "root": ".",
+      "extraPaths": [
+        ".",
+        "assignments/bootcamp/week3"
+      ]
+    }
+  ]
+}

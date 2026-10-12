@@ -12,7 +12,12 @@
     "scripts/verify_week1.py",
     "scripts/verify_bootcamp.py",
     "assignments/README.md",
-    "requirements.txt"
+    "requirements.txt",
+    ".vscode/settings.json",
+    ".vscode/extensions.json",
+    ".vscode/launch.json",
+    "pyrightconfig.json",
+    "scripts/configure_pycharm.py"
   ],
   "profiles": {
     "ml": {

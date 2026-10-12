@@ -50,3 +50,8 @@ work/nju-llm-2026/a5/data/**/*
 .env.*
 !.env.example
 *.log
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.iml
