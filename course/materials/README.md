@@ -4,23 +4,23 @@
 
 ## 按阶段查找
 
-阶段顺序与必做范围以 [学习指南](../STUDY_GUIDE.md) 为准；下面只把主题映射到材料，不另设周次或增加任务。入门实践中需要的章节按各学习单元指定范围阅读。
+单元顺序与本科/研究生范围以 [三门课课程设计](../STUDY_GUIDE.md) 为准；下面按模型主题查阅，不形成第二条学习路线。
 
-| 阶段与主题 | 本地章节 | 可选配套练习与验收 |
+| 课程与主题 | 本地章节 | 可选配套练习与验收 |
 |---|---|---|
-| 阶段 1：数学基础 · 矩阵与投影 | [01 线性代数](01_linear_algebra.md) | [A01](../../assignments/core/A01/A01_math_and_optimization.md) Part A |
-| 阶段 1：数学基础 · 概率与统计 | [02 概率与统计](02_probability_statistics.md) | A01 Part B、[T0](../tests/T0_math_diagnostic.md) |
-| 阶段 1：数学基础 · 梯度与优化 | [03 微积分与优化](03_calculus_optimization.md) | A01 Part C、T0 |
-| 阶段 2：数据科学 · 数据与实验设计 | [04 数据与实验设计](04_data_and_experiment_design.md) | [A02](../../assignments/core/A02/A02_data_audit.md)、[P1](../projects/P1_tabular_benchmark.md) |
-| 阶段 2～3：数据科学与 ML 理论 · 线性模型 | [05 线性模型](05_linear_models.md) | [A03](../../assignments/core/A03/A03_regression_from_scratch.md) |
-| 阶段 2：数据科学 · 分类与评价 | [06 分类与评价](06_classification_and_metrics.md) | [A04](../../assignments/core/A04/A04_classification_evaluation.md) |
-| 阶段 2：数据科学 · 树与集成 | [07 树与集成](07_trees_and_ensembles.md) | A04、[T1](../tests/T1_undergraduate_midterm.md) |
-| 阶段 3：ML 理论 · 概率模型与核 | [08 概率模型与核](08_probabilistic_and_kernel_ml.md) | [A05](../../assignments/core/A05/A05_probabilistic_and_kernel_ml.md) |
-| 阶段 3：ML 理论 · 无监督与泛化 | [09 无监督与泛化](09_unsupervised_and_generalization.md) | [T2](../tests/T2_graduate_ml_final.md) |
-| 阶段 4：深度学习 · 神经网络与反传 | [10 神经网络与反传](10_neural_networks_and_backprop.md) | [A06](../../assignments/core/A06/A06_backprop_and_training.md) |
-| 阶段 4：深度学习 · 训练与复现 | [11 深度学习训练模式](11_deep_learning_patterns.md) | [P2](../projects/P2_deep_learning_reproduction.md) |
-| 阶段 5：NLP / LLM · Embedding 与 Transformer | [12 Embedding 与 Transformer](12_embeddings_and_transformers.md) | [A07](../../assignments/core/A07/A07_transformer_from_scratch.md)、[T3](../tests/T3_dl_llm_oral.md) |
-| 阶段 5：NLP / LLM · 系统与评价 | [13 LLM、RAG 与 Agent](13_llm_systems.md) | 选做 [A08](../../assignments/core/A08/A08_rag_evaluation.md)、T3 |
+| ML/DL 用到时补数学 · 矩阵与投影 | [01 线性代数](01_linear_algebra.md) | [A01](../../assignments/core/A01/A01_math_and_optimization.md) Part A |
+| ML/DL 用到时补数学 · 概率与统计 | [02 概率与统计](02_probability_statistics.md) | A01 Part B、[T0](../tests/T0_math_diagnostic.md) |
+| ML/DL 用到时补数学 · 梯度与优化 | [03 微积分与优化](03_calculus_optimization.md) | A01 Part C、T0 |
+| ML：M1/M11 · 数据与实验设计 | [04 数据与实验设计](04_data_and_experiment_design.md) | [A02](../../assignments/core/A02/A02_data_audit.md)、[P1](../projects/P1_tabular_benchmark.md) |
+| ML：M2–M3 · 线性模型 | [05 线性模型](05_linear_models.md) | [A03](../../assignments/core/A03/A03_regression_from_scratch.md) |
+| ML：M3–M4 · 分类与评价 | [06 分类与评价](06_classification_and_metrics.md) | [A04](../../assignments/core/A04/A04_classification_evaluation.md) |
+| ML：M5–M6 · 树与集成 | [07 树与集成](07_trees_and_ensembles.md) | A04、[T1](../tests/T1_undergraduate_midterm.md) |
+| ML：M4/M7 · 概率模型与核 | [08 概率模型与核](08_probabilistic_and_kernel_ml.md) | [A05](../../assignments/core/A05/A05_probabilistic_and_kernel_ml.md) |
+| ML：M8–M10 · 无监督与泛化 | [09 无监督与泛化](09_unsupervised_and_generalization.md) | [T2](../tests/T2_graduate_ml_final.md) |
+| DL：D1–D2 · 神经网络与反传 | [10 神经网络与反传](10_neural_networks_and_backprop.md) | [A06](../../assignments/core/A06/A06_backprop_and_training.md) |
+| DL：D3/D12 · 训练与复现 | [11 深度学习训练模式](11_deep_learning_patterns.md) | [P2](../projects/P2_deep_learning_reproduction.md) |
+| DL：D6–D8；LLM：L2–L4 · Embedding 与 Transformer | [12 Embedding 与 Transformer](12_embeddings_and_transformers.md) | [A07](../../assignments/core/A07/A07_transformer_from_scratch.md)、[T3](../tests/T3_dl_llm_oral.md) |
+| LLM：L5–L9 · 系统与评价 | [13 LLM、RAG 与 Agent](13_llm_systems.md) | 选做 [A08](../../assignments/core/A08/A08_rag_evaluation.md)、T3 |
 | 按项目需要选读：RL、责任型 ML 与研究复现 | [14 RL、责任型 ML 与复现](14_rl_responsibility_and_research.md) | P2 或 [Capstone](../projects/CAPSTONE.md) 的相关部分 |
 
 随时查：[公式与决策卡](REFERENCE_CARD.md) · [术语表](GLOSSARY.md) · [学习与复习方法](00_how_to_study.md)

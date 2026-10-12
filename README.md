@@ -1,8 +1,10 @@
 # 机器学习学习项目
 
-这里集中保存课程、练习、个人成果和来源记录。**作业独立在 `assignments/`；服务器只拉所选练习；完整资料保存在本仓库的 Git 与 Releases。**
+本项目按 **机器学习 → 深度学习 → LLM** 的先修关系学习：先认识模型家族，再通过完整代码、局部实现和小项目掌握它们。本科核心与研究生扩展使用同一张课程地图。
 
-[服务器只拉作业教程](docs/SERVER_GUIDE.md) · [GitHub 完整存储方案](docs/GITHUB_STORAGE.md) · [NJU 课程](library/nju-llm-2026/README.md) · [全部作业](assignments/README.md)
+**先打开：[三门课课程设计与正确起点](course/STUDY_GUIDE.md)**
+
+[可用练习](assignments/README.md) · [本机环境](docs/setup/README.md) · [服务器只拉作业](docs/SERVER_GUIDE.md)
 
 <a id="quick-links"></a>
 
@@ -12,7 +14,8 @@
 |---|---|
 | 在服务器只做 NJU、Bootcamp 或某份中文作业 | [最小检出与使用教程](docs/SERVER_GUIDE.md) |
 | 了解内容存放与完整恢复 | [GitHub 存储方案](docs/GITHUB_STORAGE.md) |
-| 继续整体学习路线和当前任务 | [学习指南](course/STUDY_GUIDE.md) · [进度表](course/TRACKER.md) |
+| 先认识模型和学习顺序 | [模型地图、三门课大纲与先修关系](course/STUDY_GUIDE.md) |
+| 记录当前任务与成果 | [进度表](course/TRACKER.md) |
 | 做入门实践 | [27 次学习总览](assignments/bootcamp/README.md) · [Week 1](assignments/bootcamp/week1/README.md) · [Week 2](assignments/bootcamp/week2/README.md) · [Week 3](assignments/bootcamp/week3/README.md) |
 | 找 A01～A08 补充题目或 NJU A0～A5 | [中文作业](assignments/core/README.md) · [NJU 作业](assignments/nju-llm-2026/README.md) |
 | 跟随 NJU 大语言模型课程 | [讲义、Notebook、环境](library/nju-llm-2026/README.md) · [我的学习记录](work/nju-llm-2026/README.md) |
